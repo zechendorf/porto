@@ -1,0 +1,98 @@
+######################
+#### DEPENDENCIES ####
+######################
+
+
+############
+### PAGE ###
+############
+page {
+	homepageUid = 1
+	nav{
+		main = 2
+		meta = 3
+	}
+	header{
+		logo{
+			file = 
+			alt = 
+		}
+		phone = 0
+	}
+	pageHeader{
+		class = 
+	}
+	footer{
+		copyright
+		logo{
+			file = 
+			alt = 
+		}
+	}
+	theme {
+		navigationstyle = default
+		navigationtype =
+		breadcrumb = 1
+		breadcrumbEnableLevel = 2
+		copyright {
+			enable = 0
+			text = 
+		}
+	}
+
+	fluidtemplate {
+		layoutRootPath = EXT:porto/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:porto/Resources/Private/Partials/Page/
+		templateRootPath = EXT:porto/Resources/Private/Templates/Page/
+	}
+
+	includePath {
+		css = EXT:porto/Resources/Public/Css/
+		icons = EXT:porto/Resources/Public/Icons/
+		javascript = EXT:porto/Resources/Public/JavaScript/
+	}
+
+	meta {
+		description =
+		author =
+		keywords =
+		viewport = width=device-width, initial-scale=1
+		robots = index,follow
+		apple-mobile-web-app-capable = no
+		compatible = IE=edge
+		google = notranslate
+	}
+
+	tracking {
+		google {
+			trackingID = 
+			anonymizeIp = 1
+		}
+	}
+}
+
+##############
+### CONFIG ###
+##############
+config {
+  # cat=porto: label= Where are the Porto Theme files located?
+  portoFiles = fileadmin/Porto/HTML/
+	baseURL = 
+	# cat=porto: advanced/150/110; type=boolean; label=No Cache
+	no_cache = 0
+	# cat=porto: advanced/150/120; type=options[Do not remove=0,Remove=1,Move to external file=external]; label=Remove default JavaScript
+	removeDefaultJS =  
+	# cat=porto: advanced/150/130; type=boolean; label=Compress JavaScript
+	compressJs = 0
+	# cat=porto: advanced/150/140; type=boolean; label=Compress Css
+	compressCss =0
+	# cat=porto: advanced/150/150; type=boolean; label=Concatenate JavaScript
+	concatenateJs = 0
+	# cat=porto: advanced/150/160; type=boolean; label=Concatenate Css
+	concatenateCss = 0
+	# cat=porto: advanced/150/170; type=boolean; label=Admin Panel
+	admPanel = 0
+	# cat=porto: advanced/150/180; type=options[None=,All=all,Cached=cached,Output=output]; label=Prefix local Anchors: See [http://docs.typo3.org/typo3cms/TyposcriptReference/Setup/Config/Index.html#prefixlocalanchors] for explaination.
+	prefixLocalAnchors = all
+	headerComment = TYPO3 development by ZECHENDORF - https://www.zechendorf.com
+}

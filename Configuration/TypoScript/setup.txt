@@ -1,0 +1,466 @@
+####################
+#### PAGE CLASS ####
+####################
+lib.page.class = COA
+lib.page.class {
+	// Page alias or id as fallback
+	10 = TEXT
+	10 {
+		field = alias // uid
+		noTrimWrap = |page-||
+	}
+	// Current level of the page within the tree structure
+	20 = TEXT
+	20 {
+		data = level:1
+		noTrimWrap = | pagelevel-||
+	}
+	// Language
+	30 = TEXT
+	30 {
+		data = TSFE:sys_language_uid
+		noTrimWrap = | language-||
+	}
+	// Backend layout
+	40 = TEXT
+	40 {
+		data = levelfield:-1, backend_layout_next_level, slide
+		override.field = backend_layout
+		noTrimWrap = | backendlayout-||
+	}
+	// Layout
+	50 = TEXT
+	50 {
+		field = layout
+		noTrimWrap = | layout-||
+	}
+}
+
+##############
+#### PAGE ####
+##############
+page = PAGE
+page{
+	bodyTag = <body>
+	typeNum = 0
+	shortcutIcon = 
+	10 = FLUIDTEMPLATE
+	10 {
+		template = FILE		
+		template.file.stdWrap.cObject = CASE
+		template.file.stdWrap.cObject{
+			key.data = levelfield:-1, backend_layout_next_level, slide
+			key.override.field = backend_layout
+			default = TEXT
+			default.value = EXT:porto/Resources/Private/Templates/Page/Default.html
+			default.insertData = 1
+		}
+		layoutRootPaths.10 = EXT:porto/Resources/Private/Layouts/Page		
+		partialRootPaths.10 = EXT:porto/Resources/Private/Partials/Page		
+		templateRootPaths.10 = EXT:porto/Resources/Private/Templates/Page
+		variables{
+			imagePath = TEXT
+			imagePath.value = typo3conf/ext/porto/Resources/Public/Images
+			imagePath.value.stdWrap.insertData = 1
+			baseURL = TEXT
+			baseURL.value = 
+			headerLogoFile = TEXT
+			headerLogoFile.value = {$page.header.logo.file}
+			pageHeaderClass = TEXT
+			pageHeaderClass.value = {$page.pageHeader.class}
+			footerLogoFile = TEXT
+			footerLogoFile.value = {$page.footer.logo.file}
+			footerCopyright = TEXT
+			footerCopyright.value = {$page.footer.copyright} 
+			homepageUid = TEXT
+			homepageUid.value = {$page.homepageUid}
+			headerPhoneNr = TEXT
+			headerPhoneNr.value = {$page.header.phone}
+		}
+	}
+	
+	meta {
+		# New notation available since TYPO3 7.4
+		# see https://forge.typo3.org/issues/67360 for more details
+		viewport = {$page.meta.viewport}
+		robots = {$page.meta.robots}
+		google = {$page.meta.google}
+		apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+		description = {$page.meta.description}
+		description {
+			override.field = description
+		}
+		author = {$page.meta.author}
+		author {
+			override.field = author
+		}
+		keywords = {$page.meta.keywords}
+		keywords {
+			override.field = keywords
+		}
+		theme-color = #1b387c
+		X-UA-Compatible = {$page.meta.compatible}
+		X-UA-Compatible {
+			attribute = http-equiv
+		}
+
+		# OpenGraph Tags
+		og:title {
+			attribute = property
+			field = title
+		}
+		og:site_name {
+			attribute = property
+			data = TSFE:tmpl|setup|sitetitle
+		}
+		og:description = {$page.meta.description}
+		og:description {
+			attribute = property
+			field = description
+		}
+		og:image {
+			attribute = property
+			stdWrap.cObject = FILES
+			stdWrap.cObject {
+				references {
+					data = levelfield:-1, media, slide
+				}
+				maxItems = 1
+				renderObj = COA
+				renderObj {
+					10 = IMG_RESOURCE
+					10 {
+						file {
+							import.data = file:current:uid
+							treatIdAsReference = 1
+							width = 1280c
+							height = 720c
+						}
+						stdWrap {
+							typolink {
+								parameter.data = TSFE:lastImgResourceInfo|3
+								returnLast = url
+								forceAbsoluteUrl = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	jsFooterInline {
+			# Google Analytics
+			10 = COA
+			10 {
+					if {
+							isTrue = {$page.tracking.google.trackingID}
+					}
+					10 = TEXT
+					10.value (
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', '{$page.tracking.google.trackingID}', 'auto');
+					)
+					20 = TEXT
+					20 {
+							if {
+									isTrue = {$page.tracking.google.anonymizeIp}
+							}
+
+							value (
+
+	ga('set', 'anonymizeIp', true);
+							)
+					}
+
+					90 = TEXT
+					90.value (
+
+	ga('send', 'pageview');
+	)
+									}
+	}
+	
+	headerData.900 = TEXT
+	headerData.900{
+		if.isTrue.field = content_from_pid
+		typolink.parameter.field = content_from_pid
+		typolink.returnLast = url
+		dataWrap = <link rel="canonical" href="{$config.baseURL}|" />
+	}
+	
+	includeCSS{
+		googleFonts = https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light
+		googleFonts.external = 1
+    bootstrap = {$config.portoFiles}vendor/bootstrap/css/bootstrap.min.css
+    font-awesome = {$config.portoFiles}vendor/font-awesome/css/font-awesome.min.css
+    animate = {$config.portoFiles}vendor/animate/animate.min.css
+    simple-line-icons = {$config.portoFiles}vendor/simple-line-icons/css/simple-line-icons.min.css
+    owl-carousel = {$config.portoFiles}vendor/owl.carousel/assets/owl.carousel.min.css
+    owl-default = {$config.portoFiles}vendor/owl.carousel/assets/owl.theme.default.min.css
+    magnific-popup = {$config.portoFiles}vendor/magnific-popup/magnific-popup.min.css
+    theme = {$config.portoFiles}css/theme.css
+    elements = {$config.portoFiles}css/theme-elements.css
+    blog = {$config.portoFiles}css/theme-blog.css
+    shop = {$config.portoFiles}css/theme-shop.css
+    default = {$config.portoFiles}css/skins/default.css
+    custom = {$config.portoFiles}css/custom.css
+	}
+	includeJS{
+    modernizr = {$config.portoFiles}vendor/modernizr/modernizr.min.js
+	}
+  includeJSFooter{
+<!-- Vendor -->
+    jquery = {$config.portoFiles}vendor/jquery/jquery.min.js
+    appear = {$config.portoFiles}vendor/jquery.appear/jquery.appear.min.js
+    easing = {$config.portoFiles}vendor/jquery.easing/jquery.easing.min.js
+    cookie = {$config.portoFiles}vendor/jquery-cookie/jquery-cookie.min.js
+    bootstrap = {$config.portoFiles}vendor/bootstrap/js/bootstrap.min.js
+    common = {$config.portoFiles}vendor/common/common.min.js
+    validation = {$config.portoFiles}vendor/jquery.validation/jquery.validation.min.js
+    easy-pie-chart = {$config.portoFiles}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
+    gmap = {$config.portoFiles}vendor/jquery.gmap/jquery.gmap.min.js
+    lazyload = {$config.portoFiles}vendor/jquery.lazyload/jquery.lazyload.min.js
+    isotope = {$config.portoFiles}vendor/isotope/jquery.isotope.min.js
+    carousel = {$config.portoFiles}vendor/owl.carousel/owl.carousel.min.js
+    magnific-popup = {$config.portoFiles}vendor/magnific-popup/jquery.magnific-popup.min.js
+    vide = {$config.portoFiles}vendor/vide/vide.min.js
+    theme = {$config.portoFiles}js/theme.js
+    custom = {$config.portoFiles}js/custom.js
+    init = {$config.portoFiles}js/theme.init.js
+  }
+}
+
+
+###################################################
+#### EXCLUDE PAGE FROM EXTERNAL SEARCH RESULTS ####
+#### IF NO SEARCH IS SET FOR THIS PAGE         ####
+###################################################
+[globalVar = TSFE:page|no_search = 1]
+	page.meta.robots = noindex,follow
+[end]
+
+
+
+################
+#### CONFIG ####
+################
+config {
+	absRefPrefix = /
+	no_cache = {$config.no_cache}
+	uniqueLinkVars = 1
+	pageTitleFirst = 1
+	linkVars = L
+	prefixLocalAnchors = {$config.prefixLocalAnchors}
+	renderCharset = utf-8
+	metaCharset = utf-8
+	doctype = html5
+	removeDefaultJS = {$config.removeDefaultJS}
+	inlineStyle2TempFile = 1
+	admPanel = {$config.admPanel}
+	debug = 0
+	cache_period = 86400
+	sendCacheHeaders = 0
+	intTarget =
+	extTarget =
+	disablePrefixComment = 1
+	index_enable = 1
+	index_externals = 1
+	headerComment = {$config.headerComment}
+
+	// Enable RealUrl
+	baseURL = 
+	tx_realurl_enable = 1
+	simulateStaticDocuments = 0
+
+	// Disable Image Upscaling
+	noScaleUp = 1
+
+	// Language Settings
+	sys_language_uid = 0
+	sys_language_overlay = 1
+	sys_language_mode = content_fallback
+	language = de
+	locale_all = de_DE
+	htmlTag_setParams = lang="de" dir="ltr" class="no-js"
+
+	// Compression and Concatenation of CSS and JS Files
+	compressJs = {$config.compressJs}
+	compressCss = {$config.compressCss}
+	concatenateJs = {$config.concatenateJs}
+	concatenateCss = {$config.concatenateCss}
+	
+	// Protect Emails from Spam	
+	spamProtectEmailAddresses = 1
+	spamProtectEmailAddresses_atSubst = <span>&#064;</span>
+	
+	disableImgBorderAttr = 1 
+	disablePrefixComment = true
+	
+	typolinkCheckRootline=1
+	typolinkEnableLinksAcrossDomains = 1
+}
+
+################################################
+#### DYNAMIC CONTENT LIB FOR USAGE IN FLUID ####
+################################################
+lib.dynamicContent = COA
+lib.dynamicContent {
+	5 = LOAD_REGISTER
+	5 {
+		colPos.cObject = TEXT
+		colPos.cObject {
+			field = colPos
+			ifEmpty.cObject = TEXT
+			ifEmpty.cObject {
+				value.current = 1
+				ifEmpty = 0
+			}
+		}
+		pageUid.cObject = TEXT
+		pageUid.cObject {
+			field = pageUid
+			ifEmpty.data = TSFE:id
+		}
+		contentFromPid.cObject = TEXT
+		contentFromPid.cObject {
+			data = DB:pages:{register:pageUid}:content_from_pid
+			data.insertData = 1
+		}
+		wrap.cObject = TEXT
+		wrap.cObject {
+			field = wrap
+		}
+	}
+	20 < styles.content.get
+	20 {
+		select {
+			where = colPos={register:colPos}
+			where.insertData = 1
+			pidInList.data = register:pageUid
+			pidInList.override.data = register:contentFromPid
+		}
+		stdWrap {
+			dataWrap = {register:wrap}
+			required = 1
+		}
+	}
+	90 = RESTORE_REGISTER
+}
+lib.dynamicContentSlide =< lib.dynamicContent
+lib.dynamicContentSlide.20.slide = -1
+
+######################
+#### FLUIDCONTENT ####
+######################
+lib.fluidContent{
+	templateRootPaths {
+		20 = EXT:profenster/Resources/Private/Templates/ContentElements/
+	}
+	partialRootPaths {
+		20 = EXT:profenster/Resources/Private/Partials/ContentElements/
+	}
+	layoutRootPaths {
+		20 = EXT:profenster/Resources/Private/Layouts/ContentElements/
+	}
+}
+
+####################
+#### BREADCRUMB ####
+####################
+lib.breadcrumb = HMENU
+lib.breadcrumb{
+	special = rootline
+	special.range = 0|-2
+	wrap = <ul class="breadcrumb">|</ul>
+	1 = TMENU
+	1.NO{
+		stdWrap.htmlSpecialChars = 1
+		linkWrap = <li>|</li>
+	}
+}
+
+##################
+#### MAIN NAV ####
+##################
+lib.mainNav = HMENU
+lib.mainNav{
+	special = directory
+	special.value = {$page.nav.main}
+	1 = TMENU
+	1{
+		wrap = <ul class="nav nav-pills" id="mainNav">|</ul>
+		expAll = 1
+		NO = 1
+		NO{
+			wrapItemAndSub = <li>|</li>
+		}
+		ACT = 1
+		ACT{
+			wrapItemAndSub = <li class="active">|</li>
+		}
+		IFSUB = 1
+		IFSUB{
+			wrapItemAndSub = <li class="dropdown">|</li>
+			stdWrap.wrap = <i class="fa fa-caret-down"></i>|
+			ATagParams = class="dropdown-toggle"
+		}
+		ACTIFSUB = 1
+		ACTIFSUB{
+			wrapItemAndSub = <li class="dropdown active">|</li>
+			stdWrap.wrap = <i class="fa fa-caret-down"></i>|
+			ATagParams = class="dropdown-toggle"
+		}
+	}
+	2 < .1
+	2{
+		wrap = <ul class="dropdown-menu">|</ul>
+		IFSUB.wrapItemAndSub = <li class="dropdown-submenu">|</li>
+		ACT.wrapItemAndSub = <li>|</li>
+		ACTIFSUB.wrapItemAndSub = <li class="dropdown-submenu">|</li>
+	}
+	3 < .2
+	3{
+		expAll = 0
+		ACT = wrapItemAndSub = <li>|</li>
+		ACTIFSUB.wrapItemAndSub = <li>|</li>
+	}
+}
+
+
+##################
+#### META NAV ####
+##################
+lib.metaNav = HMENU
+lib.metaNav{
+	special = directory
+	special.value = {$page.nav.meta}
+	1 = TMENU
+	1{
+		expAll = 1
+		NO = 1
+		NO{
+			stdWrap.wrap = <i class="fa fa-angle-right"></i>|
+			wrapItemAndSub = <li class="hidden-xs">|</li>
+		}
+	}
+}
+
+######################
+#### FLUIDCONTENT ####
+######################
+lib.fluidContent{
+	templateRootPaths {
+		20 = EXT:porto/Resources/Private/Templates/ContentElements/
+	}
+	partialRootPaths {
+		20 = EXT:porto/Resources/Private/Partials/ContentElements/
+	}
+	layoutRootPaths {
+		20 = EXT:porto/Resources/Private/Layouts/ContentElements/
+	}
+}
+
