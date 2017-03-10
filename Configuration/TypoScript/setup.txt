@@ -65,24 +65,33 @@ page{
 			baseURL = TEXT
 			baseURL.value = 
 			headerLogoFile = TEXT
-			headerLogoFile.value = {$page.header.logo.file}
+			headerLogoFile.value = {$plugin.tx_porto.header.logo.file}
+			headerLogoAlt = TEXT
+			headerLogoAlt.value = {$plugin.tx_porto.header.logo.alt}
 			pageHeaderClass = TEXT
-			pageHeaderClass.value = {$page.pageHeader.class}
+			pageHeaderClass.value = 
 			footerLogoFile = TEXT
-			footerLogoFile.value = {$page.footer.logo.file}
+			footerLogoFile.value = 
 			footerCopyright = TEXT
-			footerCopyright.value = {$page.footer.copyright} 
+			footerCopyright.value = 
 			homepageUid = TEXT
-			homepageUid.value = {$page.homepageUid}
+			homepageUid.value = {$plugin.tx_porto.navigation.homepageUid}
 			headerPhoneNr = TEXT
-			headerPhoneNr.value = {$page.header.phone}
-      
+			headerPhoneNr.value = {$plugin.tx_porto.header.phone}
       headerTemplate = TEXT
 			headerTemplate.value = {$plugin.tx_porto.template.header}
       pageHeaderTemplate = TEXT
 			pageHeaderTemplate.value = {$plugin.tx_porto.template.pageHeader}
       footerTemplate = TEXT
 			footerTemplate.value = {$plugin.tx_porto.template.footer}
+      navigationMainNavRoot = TEXT
+      navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
+      navigationMetaNavRoot = TEXT
+      navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
+      headerSearchShow = TEXT
+      headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
+      headerSearchPid = TEXT
+      headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
 		}
 	}
 	

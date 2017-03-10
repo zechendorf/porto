@@ -10,7 +10,7 @@ plugin.tx_porto.template{
   # cat=porto; label = Where are the Porto Theme files?
   files = fileadmin/Porto/HTML/
   
-  # cat=porto; label = Header Layout; type=options[Default=Default]
+  # cat=porto; label = Header Layout; type=options[Default=Default,Flat=Flat,Flat with Top Bar=FlatTopBar]
   header = Default
   
   # cat=porto; label = Page Header Layout; type=options[Default=Default]
@@ -35,42 +35,32 @@ plugin.tx_porto.navigation{
   metaNavRoot = 3
 }
 
+
+##############
+### HEADER ###
+##############
+plugin.tx_porto.header{
+
+  # cat=porto.header; label = Logo File
+  logo.file =
+  
+  # cat=porto.header; label = Logo Alternative Text
+  logo.alt =
+  
+  # cat=porto.header; label = Phone
+  phone =
+  
+  # cat=porto.header; type=boolean; label= Show Search Input
+  searchShow = 0
+  
+  # cat=porto.header; label = Search Page uid
+  searchPid = 0
+}
+
 ############
 ### PAGE ###
 ############
 page {
-	homepageUid = 1
-	nav{
-		main = 2
-		meta = 3
-	}
-	header{
-		logo{
-			file = 
-			alt = 
-		}
-		phone = 0
-	}
-	pageHeader{
-		class = 
-	}
-	footer{
-		copyright =
-		logo{
-			file = 
-			alt = 
-		}
-	}
-	theme {
-		navigationstyle = default
-		navigationtype =
-		breadcrumb = 1
-		breadcrumbEnableLevel = 2
-		copyright {
-			enable = 0
-			text = 
-		}
-	}
 	meta {
 		description =
 		author =
