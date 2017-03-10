@@ -1,7 +1,7 @@
 PORTO
 =====
 
-![Porto Theme](/Documentation/Images/porto-preview.png)
+![Porto Theme](Documentation/Images/porto-preview.png)
 
 This TYPO3 Extension aims to bring the Porto Theme from Okler to TYPO3.
 
