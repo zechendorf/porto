@@ -3,6 +3,38 @@
 ######################
 
 
+################
+### TEMPLATE ###
+################
+plugin.tx_porto.template{
+  # cat=porto; label = Where are the Porto Theme files?
+  files = fileadmin/Porto/HTML/
+  
+  # cat=porto; label = Header Layout; type=options[Default=Default]
+  header = Default
+  
+  # cat=porto; label = Page Header Layout; type=options[Default=Default]
+  pageHeader = Default
+  
+  # cat=porto; label = Footer Layout; type=options[Default=Default]
+  footer = Default
+}
+
+
+##################
+### NAVIGATION ###
+##################
+plugin.tx_porto.navigation{
+  # cat=porto.navigation; label = Home page
+  homepageUid = 1
+  
+  # cat=porto.navigation; label = Main navigation root page
+  mainNavRoot = 2
+  
+   # cat=porto.navigation; label = Meta navigation root page
+  metaNavRoot = 3
+}
+
 ############
 ### PAGE ###
 ############
@@ -23,7 +55,7 @@ page {
 		class = 
 	}
 	footer{
-		copyright
+		copyright =
 		logo{
 			file = 
 			alt = 
@@ -39,19 +71,6 @@ page {
 			text = 
 		}
 	}
-
-	fluidtemplate {
-		layoutRootPath = EXT:porto/Resources/Private/Layouts/Page/
-		partialRootPath = EXT:porto/Resources/Private/Partials/Page/
-		templateRootPath = EXT:porto/Resources/Private/Templates/Page/
-	}
-
-	includePath {
-		css = EXT:porto/Resources/Public/Css/
-		icons = EXT:porto/Resources/Public/Icons/
-		javascript = EXT:porto/Resources/Public/JavaScript/
-	}
-
 	meta {
 		description =
 		author =
@@ -75,8 +94,6 @@ page {
 ### CONFIG ###
 ##############
 config {
-  # cat=porto: label= Where are the Porto Theme files located?
-  portoFiles = fileadmin/Porto/HTML/
 	baseURL = 
 	# cat=porto: advanced/150/110; type=boolean; label=No Cache
 	no_cache = 0
@@ -94,5 +111,5 @@ config {
 	admPanel = 0
 	# cat=porto: advanced/150/180; type=options[None=,All=all,Cached=cached,Output=output]; label=Prefix local Anchors: See [http://docs.typo3.org/typo3cms/TyposcriptReference/Setup/Config/Index.html#prefixlocalanchors] for explaination.
 	prefixLocalAnchors = all
-	headerComment = TYPO3 development by ZECHENDORF - https://www.zechendorf.com
+	headerComment = TYPO3 development by ZECHENDORF - https://www.zechendorf.com  
 }

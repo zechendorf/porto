@@ -76,6 +76,13 @@ page{
 			homepageUid.value = {$page.homepageUid}
 			headerPhoneNr = TEXT
 			headerPhoneNr.value = {$page.header.phone}
+      
+      headerTemplate = TEXT
+			headerTemplate.value = {$plugin.tx_porto.template.header}
+      pageHeaderTemplate = TEXT
+			pageHeaderTemplate.value = {$plugin.tx_porto.template.pageHeader}
+      footerTemplate = TEXT
+			footerTemplate.value = {$plugin.tx_porto.template.footer}
 		}
 	}
 	
@@ -195,42 +202,42 @@ page{
 	includeCSS{
 		googleFonts = https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light
 		googleFonts.external = 1
-    bootstrap = {$config.portoFiles}vendor/bootstrap/css/bootstrap.min.css
-    font-awesome = {$config.portoFiles}vendor/font-awesome/css/font-awesome.min.css
-    animate = {$config.portoFiles}vendor/animate/animate.min.css
-    simple-line-icons = {$config.portoFiles}vendor/simple-line-icons/css/simple-line-icons.min.css
-    owl-carousel = {$config.portoFiles}vendor/owl.carousel/assets/owl.carousel.min.css
-    owl-default = {$config.portoFiles}vendor/owl.carousel/assets/owl.theme.default.min.css
-    magnific-popup = {$config.portoFiles}vendor/magnific-popup/magnific-popup.min.css
-    theme = {$config.portoFiles}css/theme.css
-    elements = {$config.portoFiles}css/theme-elements.css
-    blog = {$config.portoFiles}css/theme-blog.css
-    shop = {$config.portoFiles}css/theme-shop.css
-    default = {$config.portoFiles}css/skins/default.css
-    custom = {$config.portoFiles}css/custom.css
+    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/css/bootstrap.min.css
+    font-awesome = {$plugin.tx_porto.template.files}vendor/font-awesome/css/font-awesome.min.css
+    animate = {$plugin.tx_porto.template.files}vendor/animate/animate.min.css
+    simple-line-icons = {$plugin.tx_porto.template.files}vendor/simple-line-icons/css/simple-line-icons.min.css
+    owl-carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.carousel.min.css
+    owl-default = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.theme.default.min.css
+    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/magnific-popup.min.css
+    theme = {$plugin.tx_porto.template.files}css/theme.css
+    elements = {$plugin.tx_porto.template.files}css/theme-elements.css
+    blog = {$plugin.tx_porto.template.files}css/theme-blog.css
+    shop = {$plugin.tx_porto.template.files}css/theme-shop.css
+    default = {$plugin.tx_porto.template.files}css/skins/default.css
+    custom = {$plugin.tx_porto.template.files}css/custom.css
 	}
 	includeJS{
-    modernizr = {$config.portoFiles}vendor/modernizr/modernizr.min.js
+    modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
 	}
   includeJSFooter{
 <!-- Vendor -->
-    jquery = {$config.portoFiles}vendor/jquery/jquery.min.js
-    appear = {$config.portoFiles}vendor/jquery.appear/jquery.appear.min.js
-    easing = {$config.portoFiles}vendor/jquery.easing/jquery.easing.min.js
-    cookie = {$config.portoFiles}vendor/jquery-cookie/jquery-cookie.min.js
-    bootstrap = {$config.portoFiles}vendor/bootstrap/js/bootstrap.min.js
-    common = {$config.portoFiles}vendor/common/common.min.js
-    validation = {$config.portoFiles}vendor/jquery.validation/jquery.validation.min.js
-    easy-pie-chart = {$config.portoFiles}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
-    gmap = {$config.portoFiles}vendor/jquery.gmap/jquery.gmap.min.js
-    lazyload = {$config.portoFiles}vendor/jquery.lazyload/jquery.lazyload.min.js
-    isotope = {$config.portoFiles}vendor/isotope/jquery.isotope.min.js
-    carousel = {$config.portoFiles}vendor/owl.carousel/owl.carousel.min.js
-    magnific-popup = {$config.portoFiles}vendor/magnific-popup/jquery.magnific-popup.min.js
-    vide = {$config.portoFiles}vendor/vide/vide.min.js
-    theme = {$config.portoFiles}js/theme.js
-    custom = {$config.portoFiles}js/custom.js
-    init = {$config.portoFiles}js/theme.init.js
+    jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
+    appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
+    easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
+    cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
+    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
+    common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
+    validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
+    easy-pie-chart = {$plugin.tx_porto.template.files}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
+    gmap = {$plugin.tx_porto.template.files}vendor/jquery.gmap/jquery.gmap.min.js
+    lazyload = {$plugin.tx_porto.template.files}vendor/jquery.lazyload/jquery.lazyload.min.js
+    isotope = {$plugin.tx_porto.template.files}vendor/isotope/jquery.isotope.min.js
+    carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/owl.carousel.min.js
+    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/jquery.magnific-popup.min.js
+    vide = {$plugin.tx_porto.template.files}vendor/vide/vide.min.js
+    theme = {$plugin.tx_porto.template.files}js/theme.js
+    custom = {$plugin.tx_porto.template.files}js/custom.js
+    init = {$plugin.tx_porto.template.files}js/theme.init.js
   }
 }
 
@@ -389,7 +396,7 @@ lib.breadcrumb{
 lib.mainNav = HMENU
 lib.mainNav{
 	special = directory
-	special.value = {$page.nav.main}
+	special.value = {$plugin.tx_porto.navigation.mainNavRoot}
 	1 = TMENU
 	1{
 		wrap = <ul class="nav nav-pills" id="mainNav">|</ul>
@@ -437,7 +444,7 @@ lib.mainNav{
 lib.metaNav = HMENU
 lib.metaNav{
 	special = directory
-	special.value = {$page.nav.meta}
+	special.value = {$plugin.tx_porto.navigation.metaNavRoot}
 	1 = TMENU
 	1{
 		expAll = 1
