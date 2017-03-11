@@ -1,0 +1,10 @@
+<section class="page-header page-header-reverse{f:if(condition:pageHeaderColor,then:' {pageHeaderColor}')}{f:if(condition:pageHeaderMorePadding,then:' page-header-more-padding')}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="breadcrumb  breadcrumb-valign-mid"><f:cObject typoscriptObjectPath="lib.breadcrumb" /></ul>
+        <h1>{data.title}<f:if condition="{data.subtitle}"> <span>{data.subtitle}</span></f:if></h1>
+      </div>
+    </div>
+  </div>
+</section>

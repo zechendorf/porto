@@ -395,7 +395,6 @@ lib.breadcrumb = HMENU
 lib.breadcrumb{
 	special = rootline
 	special.range = 0|-2
-	wrap = <ul class="breadcrumb">|</ul>
 	1 = TMENU
 	1.NO{
 		stdWrap.htmlSpecialChars = 1
