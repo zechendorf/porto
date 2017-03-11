@@ -16,6 +16,9 @@ plugin.tx_porto.template{
   # cat=porto; label = Header Layout; type=options[Default=Default,Flat=Flat,Flat with Top Bar=FlatTopBar,With Navigation Bar=Navbar]
   header = Default
   
+  # cat=porto; type=boolean; label= Header Navigation Type; type=options[Default=0,Flat=header-nav-stripe,Top-Line=header-nav-top-line]
+  headerNavType = 
+  
   # cat=porto; label = PageHeader Layout; type=options[None=0,Default=Default,Breadcrumb Right=BreadcrumbRight,Breadcrumb Left=BreadcrumbLeft]
   pageHeader = Default
   

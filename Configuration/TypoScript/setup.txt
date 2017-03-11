@@ -68,6 +68,8 @@ page{
 			headerLogoFile.value = {$plugin.tx_porto.header.logo.file}
 			headerLogoAlt = TEXT
 			headerLogoAlt.value = {$plugin.tx_porto.header.logo.alt}
+      headerNavType = TEXT
+      headerNavType.value = {$plugin.tx_porto.template.headerNavType}
 			pageHeaderClass = TEXT
 			pageHeaderClass.value = 
 			footerLogoFile = TEXT
