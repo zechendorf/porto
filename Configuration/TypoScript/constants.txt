@@ -10,6 +10,9 @@ plugin.tx_porto.template{
   # cat=porto; label = Where are the Porto Theme files?
   files = fileadmin/Porto/HTML/
   
+  #cat=porto; type=color; label = Theme color
+  themeColor = 
+  
   # cat=porto; label = Header Layout; type=options[Default=Default,Flat=Flat,Flat with Top Bar=FlatTopBar,With Navigation Bar=Navbar]
   header = Default
   

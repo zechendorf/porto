@@ -118,7 +118,7 @@ page{
 		keywords {
 			override.field = keywords
 		}
-		theme-color = #1b387c
+		theme-color = {$plugin.tx_porto.template.themeColor}
 		X-UA-Compatible = {$page.meta.compatible}
 		X-UA-Compatible {
 			attribute = http-equiv
