@@ -1,4 +1,4 @@
-<div class="body">
+<div class="body" id="body-{data.uid}">
 	<f:render partial="Header/{headerTemplate}" arguments="{_all}"/>
 	<div role="main" class="main">
 		<f:if condition="{pageHeaderTemplate}">
@@ -17,5 +17,8 @@
 				</div>
 			</div>
 		</div>
+		<f:if condition="{footerTemplate}">
+      <f:render partial="Footer/{footerTemplate}" arguments="{_all}"/>
+    </f:if>
 	</div>
 </div>
