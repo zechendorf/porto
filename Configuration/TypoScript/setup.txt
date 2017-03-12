@@ -309,7 +309,33 @@ config {
 	sys_language_mode = content_fallback
 	language = de
 	locale_all = de_DE
-	htmlTag_setParams = lang="de" dir="ltr" class="no-js"
+  
+  // HTML tag
+	htmlTag_setParams = 
+  htmlTag_stdWrap{
+    setContentToCurrent = 1
+    cObject = COA
+    cObject{
+      wrap = <html|>
+      10 = TEXT
+      10{
+        value = no-js
+        value.override = no-js boxed
+        value.override.if{
+          insertData = 1
+          value = {$plugin.tx_porto.template.boxed}
+          equals = 1
+        }
+        noTrimWrap = | class="|"|
+      }
+      20 = TEXT
+      20.value = de
+      20.noTrimWrap = | lang="|"|="|"|
+      30 = TEXT
+      30.value = ltr
+      30.noTrimWrap = | dir="|"|
+    }
+  }
 
 	// Compression and Concatenation of CSS and JS Files
 	compressJs = {$config.compressJs}
@@ -489,4 +515,3 @@ lib.fluidContent{
 		20 = EXT:porto/Resources/Private/Layouts/ContentElements/
 	}
 }
-
