@@ -1,0 +1,49 @@
+######################################
+#### BACKENDLAYOUT: FOOTER-SIMPLE ####
+######################################
+mod {
+  web_layout {
+    BackendLayouts {
+      footer_simple {
+        title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.footer_simple
+        config {
+           backend_layout {
+            colCount = 6
+            rowCount = 2
+            rows{
+              1{
+                columns{
+                  1{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_left
+                    colPos = 0
+                    colspan = 4
+                  }
+                  2{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_right
+                    colPos = 1
+                    colspan = 2
+                  }
+                }
+              }
+              2{
+                columns{
+                  1{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_bottom_left
+                    colPos = 4
+                    colspan = 4
+                  }
+                  2{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_bottom_right
+                    colPos = 5
+                    colspan = 2
+                  }
+                }
+              }
+            }
+          }
+        }
+        icon = EXT:porto/Resources/Public/Images/BackendLayouts/footer-simple.gif
+      }
+    }
+  }
+}

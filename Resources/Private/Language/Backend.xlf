@@ -6,6 +6,15 @@
       <trans-unit id="theme_name">
         <source>Porto Template</source>
       </trans-unit>
+      <trans-unit id="backend_layout.footer_default">
+        <source>Footer Default</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.footer_simple">
+        <source>Footer Simple</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.footer_minimal">
+        <source>Footer Minimal</source>
+      </trans-unit>
       <trans-unit id="backend_layout.full_width">
         <source>Full Width</source>
       </trans-unit>
@@ -32,6 +41,24 @@
       </trans-unit>
       <trans-unit id="backend_layout.column.far_right">
         <source>Far right</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_far_left">
+        <source>Far left</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_left">
+        <source>Left</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_right">
+        <source>Right</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_far_right">
+        <source>Far Right</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_bottom_left">
+        <source>Bottom left</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.footer_bottom_right">
+        <source>Bottom right</source>
       </trans-unit>
     </body>
   </file>

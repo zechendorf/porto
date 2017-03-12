@@ -1,0 +1,35 @@
+#######################################
+#### BACKENDLAYOUT: FOOTER-MINIMAL ####
+#######################################
+mod {
+  web_layout {
+    BackendLayouts {
+      footer_minimal {
+        title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.footer_minimal
+        config {
+           backend_layout {
+            colCount = 3
+            rowCount = 1
+            rows{
+              1{
+                columns{
+                  1{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_bottom_left
+                    colPos = 4
+                    colspan = 2
+                  }
+                  2{
+                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.footer_bottom_right
+                    colPos = 5
+                    colspan = 1
+                  }
+                }
+              }
+            }
+          }
+        }
+        icon = EXT:porto/Resources/Public/Images/BackendLayouts/footer-minimal.gif
+      }
+    }
+  }
+}

@@ -30,9 +30,6 @@ plugin.tx_porto.template{
     
   # cat=porto; type=boolean; label= PageHeader More Padding
   pageHeaderMorePadding = 0
-  
-  # cat=porto; label = Footer Layout; type=options[Default=Default]
-  footer = Default
 }
 
 
@@ -73,6 +70,23 @@ plugin.tx_porto.header{
   
   # cat=porto.header; label = Search Page uid
   searchPid = 0
+}
+
+##############
+### FOOTER ###
+##############
+plugin.tx_porto.footer{
+  # cat=porto.footer; label = From Page
+  fromPage = 
+  
+  # cat=porto.footer; label = Background; type=options[Default=,Light=light,Primary=color color-primary,Secondary=color color-secondary,Tertiary=color color-tertiary,Quaternary=color color-quaternary]
+  background = 
+  
+  # cat=porto.footer; label = Layout; type=options[Default=Default,Simple=Simple,Minimal=Minimal]
+  layout = Default
+  
+  # cat=porto.footer; label = Logo File URL
+  logo = 
 }
 
 ############

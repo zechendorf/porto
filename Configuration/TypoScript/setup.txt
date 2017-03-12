@@ -105,8 +105,14 @@ page{
       pageHeaderColor.value = {$plugin.tx_porto.template.pageHeaderColor}
       pageHeaderMorePadding = TEXT
       pageHeaderMorePadding.value = {$plugin.tx_porto.template.pageHeaderMorePadding}
-      footerTemplate = TEXT
-			footerTemplate.value = {$plugin.tx_porto.template.footer}
+      footerLayout = TEXT
+			footerLayout.value = {$plugin.tx_porto.footer.layout}
+      footerFromPage = TEXT
+			footerFromPage.value = {$plugin.tx_porto.footer.fromPage}
+      footerLogo = TEXT
+			footerLogo.value = {$plugin.tx_porto.footer.logo}
+      footerBackground = TEXT
+			footerBackground.value = {$plugin.tx_porto.footer.background}
       navigationMainNavRoot = TEXT
       navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
       navigationMetaNavRoot = TEXT

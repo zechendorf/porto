@@ -5,8 +5,8 @@
       <f:render partial="PageHeader/{pageHeaderTemplate}" arguments="{_all}"/>
     </f:if>
     <f:render partial="Layout/{pageLayoutPartial}" arguments="{_all}"/>
-		<f:if condition="{footerTemplate}">
-      <f:render partial="Footer/{footerTemplate}" arguments="{_all}"/>
-    </f:if>
 	</div>
+  <f:if condition="{footerFromPage}">
+    <f:render partial="Footer/{footerLayout}" arguments="{_all}"/>
+  </f:if>
 </div>
