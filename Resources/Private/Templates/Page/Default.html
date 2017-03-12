@@ -4,19 +4,7 @@
 		<f:if condition="{pageHeaderTemplate}">
       <f:render partial="PageHeader/{pageHeaderTemplate}" arguments="{_all}"/>
     </f:if>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '1'}"/>
-				</div>
-				<div class="col-md-6">
-					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '0'}"/>
-				</div>
-				<div class="col-md-3">
-					<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{data.uid}', colPos: '2'}"/>
-				</div>
-			</div>
-		</div>
+    <f:render partial="Layout/{pageLayoutPartial}" arguments="{_all}"/>
 		<f:if condition="{footerTemplate}">
       <f:render partial="Footer/{footerTemplate}" arguments="{_all}"/>
     </f:if>
