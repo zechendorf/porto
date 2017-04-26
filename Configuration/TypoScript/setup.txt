@@ -121,6 +121,12 @@ page{
       headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
       headerSearchPid = TEXT
       headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
+      headerSocialmedia = TEXT
+      headerSocialmedia.value = {$plugin.tx_porto.header.socialmedia}
+      headerFacebookUrl = TEXT
+      headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
+      headerTwitterUrl = TEXT
+      headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
 		}
 	}
 	

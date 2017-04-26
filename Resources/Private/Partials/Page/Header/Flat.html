@@ -18,6 +18,24 @@
               <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
                 <i class="fa fa-bars"></i>
               </button>
+              <f:if condition="{headerSocialmedia}">
+                <ul class="header-social-icons social-icons hidden-xs">
+                  <f:if condition="{headerFacebookUrl}">
+                    <li class="social-icons-facebook">
+                      <a href="{headerFacebookUrl}" target="_blank" title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                  </f:if>
+                  <f:if condition="{headerTwitterUrl}">
+                    <li class="social-icons-twitter">
+                      <a href="{headerTwitterUrl}" target="_blank" title="Twitter">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </li>
+                  </f:if>
+                </ul>
+              </f:if>
               <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                 <nav>
                   <f:cObject typoscriptObjectPath="lib.mainNav" />

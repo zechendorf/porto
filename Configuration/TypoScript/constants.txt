@@ -70,6 +70,16 @@ plugin.tx_porto.header{
   
   # cat=porto.header; label = Search Page uid
   searchPid = 0
+  
+  # cat=porto.header; type = boolean; label = Show social media buttons in header?
+  socialmedia = 0
+  
+  # cat=porto.header; label = Facebook URL
+  facebookUrl = 
+  
+  # cat=porto.header; label = Twitter URL
+  twitterUrl = 
+  
 }
 
 ##############
