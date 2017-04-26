@@ -39,12 +39,6 @@
               </items>
             </config>
           </settings.background>
-          <settings.border>
-            <label>Border</label>
-            <config>
-              <type>check</type>
-            </config>
-          </settings.border>
           <settings.entries>
             <TCEforms>
               <label>Elements</label>
