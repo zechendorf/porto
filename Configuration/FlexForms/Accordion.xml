@@ -39,6 +39,26 @@
               </items>
             </config>
           </settings.background>
+          <settings.size>
+            <label>Size</label>
+            <config>
+              <type>select</type>
+              <items type="array">
+                <numIndex index="0" type="array">
+                  <numIndex index="0">Default</numIndex>
+                  <numIndex index="1"></numIndex>
+                </numIndex>
+                <numIndex index="1" type="array">
+                  <numIndex index="0">Small</numIndex>
+                  <numIndex index="1">sm</numIndex>
+                </numIndex>
+                <numIndex index="3" type="array">
+                  <numIndex index="0">Large</numIndex>
+                  <numIndex index="1">lg</numIndex>
+                </numIndex>
+              </items>
+            </config>
+          </settings.size>
           <settings.entries>
             <TCEforms>
               <label>Elements</label>
