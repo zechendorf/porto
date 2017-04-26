@@ -24,6 +24,7 @@ namespace ZECHENDORF\Porto\Domain\Repository;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
+ 
 /**
  * The repository for Accordions
  */
