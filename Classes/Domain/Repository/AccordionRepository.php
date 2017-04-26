@@ -1,5 +1,5 @@
 <?php
-namespace ZECHENDORF\Porto\Domain\Model;
+namespace ZECHENDORF\Porto\Domain\Repository;
 /***************************************************************
  *
  *  Copyright notice
@@ -24,65 +24,10 @@ namespace ZECHENDORF\Porto\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
- 
 /**
- * Accordion
+ * The repository for Accordions
  */
-class Accordion extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
+class AccordionRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-  /**
-   * title
-   *
-   * @var string
-   */
-  protected $title = '';
-
-  /**
-   * content
-   *
-   * @var string
-   */
-  protected $content = '';
-
-  /**
-   * Returns the title
-   *
-   * @return string $title
-   */
-  public function getTitle()
-  {
-    return $this->title;
-  }
-
-  /**
-   * Sets the title
-   *
-   * @param string $title
-   * @return void
-   */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-
-  /**
-   * Returns the content
-   *
-   * @return string $content
-   */
-  public function getContent()
-  {
-    return $this->content;
-  }
-
-  /**
-   * Sets the content
-   *
-   * @param string $content
-   * @return void
-   */
-  public function setContent($content)
-  {
-    $this->content = $content;
-  }
+  
 }
