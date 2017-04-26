@@ -1,0 +1,77 @@
+<T3DataStructure> 
+  <sheets> 
+    <sDEF> 
+      <ROOT> 
+        <TCEforms> 
+          <sheetTitle>Accordion Config</sheetTitle> 
+        </TCEforms> 
+        <type>array</type> 
+        <el>
+          <settings.background>
+            <label>Background</label>
+            <config>
+              <type>select</type>
+              <items type="array">
+                <numIndex index="0" type="array">
+                  <numIndex index="0">Default</numIndex>
+                  <numIndex index="1">default</numIndex>
+                </numIndex>
+                <numIndex index="1" type="array">
+                  <numIndex index="0">Primary</numIndex>
+                  <numIndex index="1">primary</numIndex>
+                </numIndex>
+                <numIndex index="3" type="array">
+                  <numIndex index="0">Secondary</numIndex>
+                  <numIndex index="1">tecondary</numIndex>
+                </numIndex>
+                <numIndex index="4" type="array">
+                  <numIndex index="0">Tertiary</numIndex>
+                  <numIndex index="1">tertiary</numIndex>
+                </numIndex>
+                <numIndex index="5" type="array">
+                  <numIndex index="0">Quaternary</numIndex>
+                  <numIndex index="1">quaternary</numIndex>
+                </numIndex>
+                <numIndex index="6" type="array">
+                  <numIndex index="0">None</numIndex>
+                  <numIndex index="1">none</numIndex>
+                </numIndex>
+              </items>
+            </config>
+          </settings.background>
+          <settings.border>
+            <label>Border</label>
+            <config>
+              <type>check</type>
+            </config>
+          </settings.border>
+          <settings.entries>
+            <TCEforms>
+              <label>Elements</label>
+              <config type="array">
+                <type>inline</type>
+                <foreign_table>tx_porto_domain_model_accordion</foreign_table> 
+                <foreign_sortby>sorting</foreign_sortby> 
+                <maxitems>9999</maxitems> 
+                <appearance type="array"> 
+                  <collapseAll>1</collapseAll> 
+                  <showSynchronizationLink>1</showSynchronizationLink>
+                  <showPossibleLocalizationRecords>1</showPossibleLocalizationRecords> 
+                  <showAllLocalizationLink>1</showAllLocalizationLink> 
+                  <enabledControls type="array">
+                    <info>0</info> 
+                    <new>1</new> 
+                    <dragdrop>1</dragdrop>
+                    <hide>1</hide>
+                    <delete>1</delete> 
+                    <localize>1</localize>
+                  </enabledControls>
+                </appearance>
+              </config>
+            </TCEforms>
+          </settings.entries>
+        </el> 
+      </ROOT> 
+    </sDEF> 
+  </sheets> 
+</T3DataStructure>

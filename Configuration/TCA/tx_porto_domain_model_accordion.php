@@ -115,7 +115,7 @@ return array(
     ),
     'title' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:porto/Resources/Private/Language/locallang_db.xlf:tx_porto_domain_model_accordion.title',
+      'label' => 'LLL:EXT:porto/Resources/Private/Language/locallang.xlf:tx_porto_domain_model_accordion.title',
       'config' => array(
         'type' => 'input',
         'size' => 120,
@@ -124,7 +124,7 @@ return array(
     ),
     'content' => array(
       'exclude' => 1,
-      'label' => 'LLL:EXT:porto/Resources/Private/Language/locallang_db.xlf:tx_porto_domain_model_accordion.content',
+      'label' => 'LLL:EXT:porto/Resources/Private/Language/locallang.xlf:tx_porto_domain_model_accordion.content',
       'config' => array(
         'type' => 'text',
         'cols' => 40,
