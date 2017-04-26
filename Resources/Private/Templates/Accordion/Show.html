@@ -1,0 +1,28 @@
+<f:if condition="{settings.background}=='none'">
+  <f:then>
+    <f:if condition="{settings.border}">
+      <f:then><div class="panel-group" id="accordion-{contentObject.uid}"></f:then>
+      <f:else><div class="panel-group without-bg without-borders" id="accordion-{contentObject.uid}"></f:else>
+    </f:if>
+  </f:then>
+  <f:else>
+    <div class="panel-group panel-group-{settings.background}" id="accordion-{contentObject.uid}">
+  </f:else>
+</f:if>
+  <f:for each="{accordionElements}" as="accordionElement" iteration="iterator">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{contentObject.uid}" href="#collapse-{contentObject.uid}-{accordionElement.uid}">
+            {accordionElement.title}
+          </a>
+        </h4>
+      </div>
+       <div id="collapse-{contentObject.uid}-{accordionElement.uid}" class="accordion-body collapse{f:if(condition:iterator.isFirst,then:' in',else:'')}">
+        <div class="panel-body">
+          <f:format.html>{accordionElement.content}</f:format.html>
+        </div>
+      </div>
+    </div>
+  </f:for>
+</div>

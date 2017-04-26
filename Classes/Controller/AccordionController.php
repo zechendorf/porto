@@ -26,9 +26,9 @@ namespace ZECHENDORF\Porto\Controller;
  ***************************************************************/
  
 /**
- * The repository for Accordions
+ * The Controller for Accordions
  */
-class AccordionController extends \TYPO3\CMS\Extbase\Persistence\Repository
+class AccordionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
   /**
    * accordionRepository
@@ -52,6 +52,8 @@ class AccordionController extends \TYPO3\CMS\Extbase\Persistence\Repository
       }
     }
     $this->view->assign('accordionElements', $accordionElements);
+    $this->view->assign('settings', $this->settings);
+    $this->view->assign('contentObject', $this->configurationManager->getContentObject()->data);
   }
   
 }
