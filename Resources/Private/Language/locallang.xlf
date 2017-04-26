@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2017-04-25T1113:09:00Z" product-name="vinum">
+    <header />
+    <body>
+      <trans-unit id="tx_porto_domain_model_accordion">
+        <source>Accordion</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_accordion.title">
+        <source>Titel</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_accordion.content">
+        <source>Content</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
