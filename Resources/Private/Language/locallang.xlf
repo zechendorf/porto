@@ -21,6 +21,18 @@
       <trans-unit id="porto_newcontentelement.wizard.description">
         <source>Renders a testimonial (quote).</source>
       </trans-unit>
+      <trans-unit id="porto_testimonial.testimonial">
+        <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_testimonial.name">
+        <source>Name</source>
+      </trans-unit>
+      <trans-unit id="porto_testimonial.position">
+        <source>Position</source>
+      </trans-unit>
+      <trans-unit id="porto_testimonial.photo">
+        <source>Photo</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
