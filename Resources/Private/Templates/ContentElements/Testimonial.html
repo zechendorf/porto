@@ -1,0 +1,32 @@
+<f:if condition="{data.bodytext}">
+    <div class="testimonial testimonial-style-3">
+        <blockquote>
+            <f:format.html>{data.bodytext}</f:format.html>
+        </blockquote>
+        <div class="testimonial-arrow-down"></div>
+        <div class="testimonial-author">
+            <f:if condition="{gallery.count.files}">
+                <f:render section="image" arguments="{_all}" />
+            </f:if>
+            <p>
+                <strong>{data.header}</strong>
+                <span>{data.subheader}</span>
+            </p>
+        </div>
+    </div>
+</f:if>
+
+
+<f:section name="image">
+    <div class="testimonial-author-thumbnail">
+        <f:for each="{gallery.rows}" as="row" iteration="rowIterator">
+            <f:if condition="{rowIterator.isFirst}">
+                <f:for each="{row.columns}" as="column" iteration="columnIterator">
+                    <f:if condition="{columnIterator.isFirst}">
+                        <f:image src="{column.media.uid}" treatIdAsReference="1" width="55c" height="55c" class="img-responsive img-circle" />
+                    </f:if>
+                </f:for>
+            </f:if>
+        </f:for>
+    </div>
+</f:section>

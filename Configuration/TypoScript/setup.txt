@@ -433,21 +433,6 @@ lib.dynamicContent {
 lib.dynamicContentSlide =< lib.dynamicContent
 lib.dynamicContentSlide.20.slide = -1
 
-######################
-#### FLUIDCONTENT ####
-######################
-lib.fluidContent{
-    templateRootPaths {
-        20 = EXT:profenster/Resources/Private/Templates/ContentElements/
-    }
-    partialRootPaths {
-        20 = EXT:profenster/Resources/Private/Partials/ContentElements/
-    }
-    layoutRootPaths {
-        20 = EXT:profenster/Resources/Private/Layouts/ContentElements/
-    }
-}
-
 ####################
 #### BREADCRUMB ####
 ####################
@@ -546,5 +531,18 @@ lib.fluidContent{
     }
     layoutRootPaths {
         20 = EXT:porto/Resources/Private/Layouts/ContentElements/
+    }
+}
+
+
+####################
+#### TT_CONTENT ####
+####################
+tt_content {
+    porto_testimonial < lib.fluidContent
+    porto_testimonial {
+        dataProcessing < tt_content.textmedia.dataProcessing
+        dataProcessing.10.references.fieldName = image
+        templateName = Testimonial
     }
 }
