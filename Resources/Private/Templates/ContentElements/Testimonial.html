@@ -1,5 +1,55 @@
 <f:if condition="{data.bodytext}">
-    <div class="testimonial testimonial-style-3">
+    <f:switch expression="{data.layout}">
+        <f:case value="1">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-primary', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="2">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-secondary', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="3">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-tertiary', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="4">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-quaternary', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="5">
+            <f:render section="testimonialImageAbove" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-style-2', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="7">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-style-4', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case value="8">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-style-5', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+        <f:case default="true">
+            <f:render section="testimonial" arguments="{data : data, gallery : gallery, testimonialClass: 'testimonial-style-3', imgClass: 'img-responsive img-circle'}" />
+        </f:case>
+    </f:switch>
+</f:if>
+
+
+<f:section name="testimonial">
+    <div class="testimonial {testimonialClass}">
+        <blockquote>
+            <f:format.html>{data.bodytext}</f:format.html>
+        </blockquote>
+        <div class="testimonial-arrow-down"></div>
+        <div class="testimonial-author">
+            <f:if condition="{gallery.count.files}">
+                <div class="testimonial-author-thumbnail">
+                    <f:render section="image" arguments="{_all}" />
+                </div>
+            </f:if>
+            <p>
+                <strong>{data.header}</strong>
+                <span>{data.subheader}</span>
+            </p>
+        </div>
+    </div>
+</f:section>
+
+<f:section name="testimonialImageAbove">
+    <div class="testimonial {testimonialClass}">
         <blockquote>
             <f:format.html>{data.bodytext}</f:format.html>
         </blockquote>
@@ -14,19 +64,16 @@
             </p>
         </div>
     </div>
-</f:if>
-
+</f:section>
 
 <f:section name="image">
-    <div class="testimonial-author-thumbnail">
-        <f:for each="{gallery.rows}" as="row" iteration="rowIterator">
-            <f:if condition="{rowIterator.isFirst}">
-                <f:for each="{row.columns}" as="column" iteration="columnIterator">
-                    <f:if condition="{columnIterator.isFirst}">
-                        <f:image src="{column.media.uid}" treatIdAsReference="1" width="55c" height="55c" class="img-responsive img-circle" />
-                    </f:if>
-                </f:for>
-            </f:if>
-        </f:for>
-    </div>
+    <f:for each="{gallery.rows}" as="row" iteration="rowIterator">
+        <f:if condition="{rowIterator.isFirst}">
+            <f:for each="{row.columns}" as="column" iteration="columnIterator">
+                <f:if condition="{columnIterator.isFirst}">
+                    <f:image src="{column.media.uid}" treatIdAsReference="1" width="55c" height="55c" class="{imgClass}" />
+                </f:if>
+            </f:for>
+        </f:if>
+    </f:for>
 </f:section>
