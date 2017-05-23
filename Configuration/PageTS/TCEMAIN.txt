@@ -1,0 +1,2 @@
+# RTE preset for bodytext = porto_default
+RTE.config.tt_content.bodytext.preset = porto_default
