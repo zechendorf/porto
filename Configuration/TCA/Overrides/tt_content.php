@@ -1,6 +1,6 @@
 <?php
 
-// Adds the porto_testimonial element to the "Type" dropdown
+// porto_testimonial: add the element to the "type" dropdown
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
     array(
         'LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_newcontentelement.title',
@@ -11,9 +11,15 @@
     'porto_testimonial'
 );
 
-// Configure backend fields for porto_testimonial
+// porto_testimonial: TCA
 $GLOBALS['TCA']['tt_content']['types']['porto_testimonial'] = array(
     'columnsOverrides' => array(
+        'bodytext' => array(
+            'config' => array(
+                'enableRichtext' => 1,
+                'richtextConfiguration' => 'default'
+            )
+        ),
         'layout' => array(
             'config' => array(
                 'items' => array(
