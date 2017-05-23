@@ -546,3 +546,18 @@ tt_content {
         templateName = Testimonial
     }
 }
+
+########################
+#### INDEXED_SEARCH ####
+########################
+plugin.tx_indexedsearch{
+    view {
+        templateRootPaths.10 = EXT:porto/Resources/Private/Templates/IndexedSearch
+        layoutRootPaths.10 = EXT:porto/Resources/Private/Layouts/IndexedSearch
+        partialRootPaths.10 = EXT:porto/Resources/Private/Partials/IndexedSearch
+    }
+    settings{
+        displayRules = 0
+        displayAdvancedSearchLink = 0
+    }
+}

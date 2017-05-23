@@ -1,74 +1,75 @@
 <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
-	<div class="header-body">
-		<div class="header-container container">
-			<div class="header-row">
-				<div class="header-column">
-					<div class="header-logo">
-						<f:link.page pageUid="{homepageUid}">
-              <f:if condition="{headerLogoBig}">
-                <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
-                <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
-              </f:if>
-						</f:link.page>
-					</div>
-				</div>
-				<div class="header-column">
-					<div class="header-row">
-            <f:if condition="{headerSearchShow}">
-              <div class="header-search hidden-xs">
-                <form id="searchForm" action="page-search-results.html" method="get">
-                  <div class="input-group">
-                    <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-            </f:if>
-						<nav class="header-nav-top">
-							<ul class="nav nav-pills">
-								<f:if condition="{navigationMetaNavRoot}"><f:cObject typoscriptObjectPath="lib.metaNav" /></f:if>
-								<f:if condition="{headerPhoneNr}">
-									<li class="hidden-xs">
-										<span class="ws-nowrap"><i class="fa fa-phone"></i> {headerPhoneNr}</span>
-									</li>
-								</f:if>
-							</ul>
-						</nav>
-					</div>
-					<div class="header-row">
-						<div class="header-nav{f:if(condition:headerNavType,then:' {headerNavType}')}">
-							<button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-								<i class="fa fa-bars"></i>
-							</button>
-              <f:if condition="{headerSocialmedia}">
-                <ul class="header-social-icons social-icons hidden-xs">
-                  <f:if condition="{headerFacebookUrl}">
-                    <li class="social-icons-facebook">
-                      <a href="{headerFacebookUrl}" target="_blank" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                  </f:if>
-                  <f:if condition="{headerTwitterUrl}">
-                    <li class="social-icons-twitter">
-                      <a href="{headerTwitterUrl}" target="_blank" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                  </f:if>
-                </ul>
-              </f:if>
-							<div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-								<nav>
-									<f:cObject typoscriptObjectPath="lib.mainNav" />
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="header-body">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-logo">
+                        <f:link.page pageUid="{homepageUid}">
+                            <f:if condition="{headerLogoBig}">
+                                <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
+                                <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
+                            </f:if>
+                        </f:link.page>
+                    </div>
+                </div>
+                <div class="header-column">
+                    <div class="header-row">
+                        <f:if condition="{headerSearchShow}">
+                            <div class="header-search hidden-xs">
+                                <f:form action="search" extensionName="indexedsearch" pluginName="pi2" controller="Search" method="post" id="tx_indexedsearch" pageUid="{headerSearchPid}">
+                                    <div class="input-group">
+                                        <f:form.textfield name="search[sword]" value="" class="form-control" placeholder="{f:translate(key:'LLL:EXT:porto/Resources/Private/Language/locallang.xml:form.searchFor')}" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <f:form.submit name="search[submitButton]" value="{f:translate(key: 'form.submit')}" id="tx-indexedsearch-searchbox-button-submit" class="tx-indexedsearch-searchbox-button" class="hidden" />
+                                </f:form>
+                            </div>
+                        </f:if>
+                        <nav class="header-nav-top">
+                            <ul class="nav nav-pills">
+                                <f:if condition="{navigationMetaNavRoot}"><f:cObject typoscriptObjectPath="lib.metaNav" /></f:if>
+                                <f:if condition="{headerPhoneNr}">
+                                    <li class="hidden-xs">
+                                        <span class="ws-nowrap"><i class="fa fa-phone"></i> {headerPhoneNr}</span>
+                                    </li>
+                                </f:if>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header-row">
+                        <div class="header-nav{f:if(condition:headerNavType,then:' {headerNavType}')}">
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <f:if condition="{headerSocialmedia}">
+                                <ul class="header-social-icons social-icons hidden-xs">
+                                    <f:if condition="{headerFacebookUrl}">
+                                        <li class="social-icons-facebook">
+                                            <a href="{headerFacebookUrl}" target="_blank" title="Facebook">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                    </f:if>
+                                    <f:if condition="{headerTwitterUrl}">
+                                        <li class="social-icons-twitter">
+                                            <a href="{headerTwitterUrl}" target="_blank" title="Twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                    </f:if>
+                                </ul>
+                            </f:if>
+                            <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                                <nav>
+                                    <f:cObject typoscriptObjectPath="lib.mainNav" />
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
