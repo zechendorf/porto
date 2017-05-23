@@ -12,6 +12,15 @@
       <trans-unit id="tx_porto_domain_model_accordion.content">
         <source>Content</source>
       </trans-unit>
+      <trans-unit id="porto_newcontentelement.title">
+        <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.title">
+        <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.description">
+        <source>Renders a testimonial (quote).</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

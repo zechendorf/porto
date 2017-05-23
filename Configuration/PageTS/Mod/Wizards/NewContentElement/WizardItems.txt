@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+    elements {
+        porto_testimonial {
+            iconIdentifier = your-icon-identifier
+            title = LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_newcontentelement.wizard.title
+            description = LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_newcontentelement.wizard.description
+            tt_content_defValues {
+                CType = porto_testimonial
+            }
+        }
+    }
+    show := addToList(porto_testimonial)
+}
