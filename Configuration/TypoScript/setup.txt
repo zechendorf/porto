@@ -476,22 +476,28 @@ lib.mainNav{
         NO = 1
         NO{
             wrapItemAndSub = <li>|</li>
+            ATagParams = target="{field:target}"
+            ATagParams.insertData = 1
         }
         ACT = 1
         ACT{
             wrapItemAndSub = <li class="active">|</li>
+            ATagParams = target="{field:target}"
+            ATagParams.insertData = 1
         }
         IFSUB = 1
         IFSUB{
             wrapItemAndSub = <li class="dropdown">|</li>
             stdWrap.wrap = <i class="fa fa-caret-down"></i>|
-            ATagParams = class="dropdown-toggle"
+            ATagParams = class="dropdown-toggle" target="{field:target}"
+            ATagParams.insertData = 1
         }
         ACTIFSUB = 1
         ACTIFSUB{
             wrapItemAndSub = <li class="dropdown active">|</li>
             stdWrap.wrap = <i class="fa fa-caret-down"></i>|
-            ATagParams = class="dropdown-toggle"
+            ATagParams = class="dropdown-toggle" target="{field:target}"
+            ATagParams.insertData = 1
         }
     }
     2 < .1
