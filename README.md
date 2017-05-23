@@ -11,7 +11,20 @@ The extension expects the HTML files to be in the folder ``fileadmin/Porto/HTML`
 
 Template options can be configured in Constants.
 
-## The following content types are supported at the moment
+## Page Layouts
+
+The following page layouts have been implemented:
+
+ * [full width](http://preview.oklerthemes.com/porto/5.5.0/page-full-width.html)
+ * [left and right sidebar](http://preview.oklerthemes.com/porto/5.5.0/page-left-and-right-sidebars.html)
+ * [left sidebar](http://preview.oklerthemes.com/porto/5.5.0/page-left-sidebar.html)
+ * [right sidebar](http://preview.oklerthemes.com/porto/5.5.0/page-right-sidebar.html)
+ * two right sidebars
+
+
+## Content Types
+
+The following content types are supported at the moment:
 
  * [Header](http://preview.oklerthemes.com/porto/5.5.0/shortcodes-headings.html)
  * [Textmedia](http://preview.oklerthemes.com/porto/5.5.0/page-left-sidebar.html)
