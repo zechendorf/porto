@@ -1,16 +1,16 @@
 <?php
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'porto',
-    'description' => 'Theme based on porto',
+    'description' => 'Website Template based on porto okler. IMPORTANT: You need to buy the template in order for this extension to work: https://goo.gl/MpLeUN',
     'category' => 'plugin',
     'author' => 'Christopher Zechendorf',
     'author_email' => 'christopher@zechendorf.com',
-    'state' => 'stable',
+    'state' => 'beta',
     'internal' => '',
     'uploadfolder' => '1',
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
-    'version' => '1.0.0',
+    'version' => '0.9.3',
     'constraints' => array(
         'depends' => array(
             'typo3' => '8.7.0-8.7.99',
