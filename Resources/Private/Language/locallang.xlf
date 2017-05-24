@@ -33,6 +33,9 @@
       <trans-unit id="porto_testimonial.photo">
         <source>Photo</source>
       </trans-unit>
+      <trans-unit id="form.searchFor">
+        <source>Search for...</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>

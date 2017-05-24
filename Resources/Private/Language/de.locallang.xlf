@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2016-09-08T11:32:13Z" product-name="vinum">
+        <header/>
+        <body>
+            <trans-unit id="tx_porto_domain_model_accordion">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="tx_porto_domain_model_accordion.title">
+                <source>Titel</source>
+            </trans-unit>
+            <trans-unit id="tx_porto_domain_model_accordion.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="porto_newcontentelement.title">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="porto_newcontentelement.wizard.title">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="porto_newcontentelement.wizard.description">
+                <source>Renders a testimonial (quote).</source>
+            </trans-unit>
+            <trans-unit id="porto_testimonial.testimonial">
+                <source>Testimonial</source>
+            </trans-unit>
+            <trans-unit id="porto_testimonial.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="porto_testimonial.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="porto_testimonial.photo">
+                <source>Photo</source>
+            </trans-unit>
+            <trans-unit id="form.searchFor">
+                <source>Search for...</source>
+                <target>Suche...</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

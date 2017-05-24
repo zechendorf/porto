@@ -23,3 +23,6 @@ if (!defined('TYPO3_MODE')) {
 
 // Wizard Items
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/Mod/Wizards/NewContentElement/WizardItems.txt">');
+
+// RTE Config
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['porto_default'] = 'EXT:porto/Configuration/PageTS/Rte/Default.yaml';
