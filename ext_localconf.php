@@ -26,3 +26,6 @@ if (!defined('TYPO3_MODE')) {
 
 // RTE Config
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['porto_default'] = 'EXT:porto/Configuration/PageTS/Rte/Default.yaml';
+
+// PAge tree: use nav_title
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('options.pageTree.showNavTitle = 1');
