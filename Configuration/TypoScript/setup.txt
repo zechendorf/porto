@@ -246,19 +246,20 @@ page{
     includeCSS{
         googleFonts = https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light
         googleFonts.external = 1
-    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/css/bootstrap.min.css
-    font-awesome = {$plugin.tx_porto.template.files}vendor/font-awesome/css/font-awesome.min.css
-    animate = {$plugin.tx_porto.template.files}vendor/animate/animate.min.css
-    simple-line-icons = {$plugin.tx_porto.template.files}vendor/simple-line-icons/css/simple-line-icons.min.css
-    owl-carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.carousel.min.css
-    owl-default = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.theme.default.min.css
-    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/magnific-popup.min.css
-    theme = {$plugin.tx_porto.template.files}css/theme.css
-    elements = {$plugin.tx_porto.template.files}css/theme-elements.css
-    blog = {$plugin.tx_porto.template.files}css/theme-blog.css
-    shop = {$plugin.tx_porto.template.files}css/theme-shop.css
-    default = {$plugin.tx_porto.template.files}css/skins/default.css
-    custom = {$plugin.tx_porto.template.files}css/custom.css
+        bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/css/bootstrap.min.css
+        font-awesome = {$plugin.tx_porto.template.files}vendor/font-awesome/css/font-awesome.min.css
+        animate = {$plugin.tx_porto.template.files}vendor/animate/animate.min.css
+        simple-line-icons = {$plugin.tx_porto.template.files}vendor/simple-line-icons/css/simple-line-icons.min.css
+        owl-carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.carousel.min.css
+        owl-default = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.theme.default.min.css
+        magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/magnific-popup.min.css
+        theme = {$plugin.tx_porto.template.files}css/theme.css
+        elements = {$plugin.tx_porto.template.files}css/theme-elements.css
+        blog = {$plugin.tx_porto.template.files}css/theme-blog.css
+        shop = {$plugin.tx_porto.template.files}css/theme-shop.css
+        default = {$plugin.tx_porto.template.files}css/skins/default.css
+        tx_porto = EXT:porto/Resources/Public/Css/Porto.css
+        custom = {$plugin.tx_porto.template.files}css/custom.css
     }
     includeJS{
     modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
