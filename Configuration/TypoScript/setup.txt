@@ -515,6 +515,8 @@ lib.metaNav{
         NO{
             stdWrap.wrap = <i class="fa fa-angle-right"></i>|
             wrapItemAndSub = <li class="hidden-xs">|</li>
+            ATagParams = target="{field:target}"
+            ATagParams.insertData = 1
         }
     }
 }
