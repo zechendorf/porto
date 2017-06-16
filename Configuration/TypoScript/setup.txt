@@ -564,9 +564,3 @@ plugin.tx_indexedsearch{
         displayAdvancedSearchLink = 0
     }
 }
-
-
-[globalVar = GP:tx_accelerated_mobile_pages|amp > 0]
-    htmlTag_stdWrap >
-    htmlTag_setParams = ⚡
-[global]
