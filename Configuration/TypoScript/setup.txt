@@ -85,8 +85,8 @@ page{
             headerLogoAlt.value = {$plugin.tx_porto.header.logo.alt}
             headerLogoBig = TEXT
             headerLogoBig.value = {$plugin.tx_porto.header.logo.big}
-      headerNavType = TEXT
-      headerNavType.value = {$plugin.tx_porto.template.headerNavType}
+            headerNavType = TEXT
+            headerNavType.value = {$plugin.tx_porto.template.headerNavType}
             pageHeaderClass = TEXT
             pageHeaderClass.value =
             footerLogoFile = TEXT
@@ -97,36 +97,36 @@ page{
             homepageUid.value = {$plugin.tx_porto.navigation.homepageUid}
             headerPhoneNr = TEXT
             headerPhoneNr.value = {$plugin.tx_porto.header.phone}
-      headerTemplate = TEXT
+            headerTemplate = TEXT
             headerTemplate.value = {$plugin.tx_porto.template.header}
-      pageHeaderTemplate = TEXT
+            pageHeaderTemplate = TEXT
             pageHeaderTemplate.value = {$plugin.tx_porto.template.pageHeader}
-      pageHeaderColor = TEXT
-      pageHeaderColor.value = {$plugin.tx_porto.template.pageHeaderColor}
-      pageHeaderMorePadding = TEXT
-      pageHeaderMorePadding.value = {$plugin.tx_porto.template.pageHeaderMorePadding}
-      footerLayout = TEXT
+            pageHeaderColor = TEXT
+            pageHeaderColor.value = {$plugin.tx_porto.template.pageHeaderColor}
+            pageHeaderMorePadding = TEXT
+            pageHeaderMorePadding.value = {$plugin.tx_porto.template.pageHeaderMorePadding}
+            footerLayout = TEXT
             footerLayout.value = {$plugin.tx_porto.footer.layout}
-      footerFromPage = TEXT
+            footerFromPage = TEXT
             footerFromPage.value = {$plugin.tx_porto.footer.fromPage}
-      footerLogo = TEXT
+            footerLogo = TEXT
             footerLogo.value = {$plugin.tx_porto.footer.logo}
-      footerBackground = TEXT
+            footerBackground = TEXT
             footerBackground.value = {$plugin.tx_porto.footer.background}
-      navigationMainNavRoot = TEXT
-      navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
-      navigationMetaNavRoot = TEXT
-      navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
-      headerSearchShow = TEXT
-      headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
-      headerSearchPid = TEXT
-      headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
-      headerSocialmedia = TEXT
-      headerSocialmedia.value = {$plugin.tx_porto.header.socialmedia}
-      headerFacebookUrl = TEXT
-      headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
-      headerTwitterUrl = TEXT
-      headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            navigationMainNavRoot = TEXT
+            navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
+            navigationMetaNavRoot = TEXT
+            navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
+            headerSearchShow = TEXT
+            headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
+            headerSearchPid = TEXT
+            headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
+            headerSocialmedia = TEXT
+            headerSocialmedia.value = {$plugin.tx_porto.header.socialmedia}
+            headerFacebookUrl = TEXT
+            headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
+            headerTwitterUrl = TEXT
+            headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
         }
     }
 
@@ -262,28 +262,27 @@ page{
         custom = {$plugin.tx_porto.template.files}css/custom.css
     }
     includeJS{
-    modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
+        modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
     }
-  includeJSFooter{
-<!-- Vendor -->
-    jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
-    appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
-    easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
-    cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
-    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
-    common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
-    validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
-    easy-pie-chart = {$plugin.tx_porto.template.files}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
-    gmap = {$plugin.tx_porto.template.files}vendor/jquery.gmap/jquery.gmap.min.js
-    lazyload = {$plugin.tx_porto.template.files}vendor/jquery.lazyload/jquery.lazyload.min.js
-    isotope = {$plugin.tx_porto.template.files}vendor/isotope/jquery.isotope.min.js
-    carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/owl.carousel.min.js
-    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/jquery.magnific-popup.min.js
-    vide = {$plugin.tx_porto.template.files}vendor/vide/vide.min.js
-    theme = {$plugin.tx_porto.template.files}js/theme.js
-    custom = {$plugin.tx_porto.template.files}js/custom.js
-    init = {$plugin.tx_porto.template.files}js/theme.init.js
-  }
+    includeJSFooter{
+        jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
+        appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
+        easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
+        cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
+        bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
+        common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
+        validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
+        easy-pie-chart = {$plugin.tx_porto.template.files}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
+        gmap = {$plugin.tx_porto.template.files}vendor/jquery.gmap/jquery.gmap.min.js
+        lazyload = {$plugin.tx_porto.template.files}vendor/jquery.lazyload/jquery.lazyload.min.js
+        isotope = {$plugin.tx_porto.template.files}vendor/isotope/jquery.isotope.min.js
+        carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/owl.carousel.min.js
+        magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/jquery.magnific-popup.min.js
+        vide = {$plugin.tx_porto.template.files}vendor/vide/vide.min.js
+        theme = {$plugin.tx_porto.template.files}js/theme.js
+        custom = {$plugin.tx_porto.template.files}js/custom.js
+        init = {$plugin.tx_porto.template.files}js/theme.init.js
+    }
 }
 
 
