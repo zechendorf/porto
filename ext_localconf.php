@@ -10,6 +10,13 @@ if (!defined('TYPO3_MODE')) {
     array()
 );
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'RevolutionSlider',
+    array('RevolutionSlider' => 'show'),
+    array()
+);
+
 // TCEMAIN
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/TCEMAIN.txt">');
 

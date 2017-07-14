@@ -284,8 +284,9 @@ page{
     includeJS{
         modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
     }
-    includeJSFooter{
+    includeJSFooterlibs{
         jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
+        jquery.forceOnTop = 1
         appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
         easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
         cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
