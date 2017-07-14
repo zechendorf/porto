@@ -79,6 +79,8 @@ page{
             imagePath.value.stdWrap.insertData = 1
             baseURL = TEXT
             baseURL.value =
+            skin = TEXT
+            skin.value = {$plugin.tx_porto.template.skin}
             headerLogoFile = TEXT
             headerLogoFile.value = {$plugin.tx_porto.header.logo.file}
             headerLogoAlt = TEXT
