@@ -99,6 +99,12 @@ page{
             homepageUid.value = {$plugin.tx_porto.navigation.homepageUid}
             headerPhoneNr = TEXT
             headerPhoneNr.value = {$plugin.tx_porto.header.phone}
+            headerEmail = TEXT
+            headerEmail.value = {$plugin.tx_porto.header.email}
+            headerAddress = TEXT
+            headerAddress.value = {$plugin.tx_porto.header.address}
+            headerClaim = TEXT
+            headerClaim.value = {$plugin.tx_porto.header.claim}
             headerTemplate = TEXT
             headerTemplate.value = {$plugin.tx_porto.template.header}
             pageHeaderTemplate = TEXT

@@ -1,14 +1,21 @@
 <div class="body" id="body-{data.uid}">
-    <f:render partial="Header/{headerTemplate}" arguments="{_all}"/>
-        <div role="main" class="main">
-            <f:if condition="{pageHeaderTemplate}">
-                <f:render partial="PageHeader/{pageHeaderTemplate}" arguments="{_all}"/>
-            </f:if>
-            <!--TYPO3SEARCH_begin-->
-            <f:render partial="Layout/{pageLayoutPartial}" arguments="{_all}"/>
-            <!--TYPO3SEARCH_end-->
-        </div>
-        <f:if condition="{footerFromPage}">
+    <f:switch expression="{skin}">
+        <f:case value="skin-restaurant">
+            <f:render partial="Header/Restaurant" arguments="{_all}"/>
+        </f:case>
+        <f:defaultCase>
+            <f:render partial="Header/{headerTemplate}" arguments="{_all}"/>
+        </f:defaultCase>
+    </f:switch>
+    <div role="main" class="main">
+        <f:if condition="{pageHeaderTemplate}">
+            <f:render partial="PageHeader/{pageHeaderTemplate}" arguments="{_all}"/>
+        </f:if>
+        <!--TYPO3SEARCH_begin-->
+        <f:render partial="Layout/{pageLayoutPartial}" arguments="{_all}"/>
+        <!--TYPO3SEARCH_end-->
+    </div>
+    <f:if condition="{footerFromPage}">
         <f:render partial="Footer/{footerLayout}" arguments="{_all}"/>
     </f:if>
 </div>

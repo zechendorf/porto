@@ -68,6 +68,15 @@ plugin.tx_porto.header{
     # cat=porto.header; label = Phone
     phone =
 
+    # cat=porto.header; label = Email
+    email =
+
+    # cat=porto.header; label = Address
+    address =
+
+    # cat=porto.header; label = Claim
+    claim =
+
     # cat=porto.header; type=boolean; label= Show Search Input
     searchShow = 0
 
