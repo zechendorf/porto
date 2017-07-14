@@ -135,6 +135,16 @@ page{
             headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
             headerTwitterUrl = TEXT
             headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            facebookUrl = TEXT
+            facebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
+            twitterUrl = TEXT
+            twitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            instagramUrl = TEXT
+            instagramUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            googleplusUrl = TEXT
+            googleplusUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            linkedinUrl = TEXT
+            linkedinUrl.value = {$plugin.tx_porto.header.twitterUrl}
         }
     }
 

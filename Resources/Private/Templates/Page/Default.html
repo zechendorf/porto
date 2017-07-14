@@ -15,7 +15,14 @@
         <f:render partial="Layout/{pageLayoutPartial}" arguments="{_all}"/>
         <!--TYPO3SEARCH_end-->
     </div>
-    <f:if condition="{footerFromPage}">
-        <f:render partial="Footer/{footerLayout}" arguments="{_all}"/>
-    </f:if>
+    <f:switch expression="{skin}">
+        <f:case value="skin-restaurant">
+            <f:render partial="Footer/Restaurant" arguments="{_all}"/>
+        </f:case>
+        <f:defaultCase>
+            <f:if condition="{footerFromPage}">
+                <f:render partial="Footer/{footerLayout}" arguments="{_all}"/>
+            </f:if>
+        </f:defaultCase>
+    </f:switch>
 </div>

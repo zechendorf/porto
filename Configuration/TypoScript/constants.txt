@@ -86,12 +86,20 @@ plugin.tx_porto.header{
     # cat=porto.header; type = boolean; label = Show social media buttons in header?
     socialmedia = 0
 
-    # cat=porto.header; label = Facebook URL
+    # cat=porto.socialmedia; label = Facebook URL
     facebookUrl =
 
-    # cat=porto.header; label = Twitter URL
+    # cat=porto.socialmedia; label = Twitter URL
     twitterUrl =
 
+    # cat=porto.socialmedia; label = Instagram URL
+    instagramUrl =
+
+    # cat=porto.socialmedia; label = Google+ URL
+    googleplusUrl =
+
+    # cat=porto.socialmedia; label = LinkedIn URL
+    linkedinUrl =
 }
 
 ##############

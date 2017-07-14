@@ -1,0 +1,38 @@
+<footer id="footer" class="color color-secondary short">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 center">
+                <ul class="social-icons mb-md">
+                    <f:if condition="{instagramUrl}">
+                        <li class="social-icons-instagram"><a href="{instagramUrl}" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                    </f:if>
+                    <f:if condition="{facebookUrl}">
+                        <li class="social-icons-facebook"><a href="{facebookUrl}" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    </f:if>
+                    <f:if condition="{twitterUrl}">
+                        <li class="social-icons-twitter"><a href="{twitterUrl}" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    </f:if>
+                    <f:if condition="{googleplusUrl}">
+                        <li class="social-icons-googleplus"><a href="{googleplusUrl}" target="_blank" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+                    </f:if>
+                    <f:if condition="{linkedinUrl}">
+                        <li class="social-icons-linkedin"><a href="{linkedinUrl}" target="_blank" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                    </f:if>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 center">
+                    <p>
+                        <i class="fa fa-map-marker"></i> {headerAddress} <span class="separator">|</span>
+                        <i class="fa fa-phone"></i> {headerPhoneNr} <span class="separator">|</span>
+                        <i class="fa fa-envelope"></i> <f:link.email email="{headerEmail}">{headerEmail}</f:link.email>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
