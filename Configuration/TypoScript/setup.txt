@@ -71,6 +71,8 @@ page{
                 pagets__right_sidebar.value = RightSidebar
                 pagets__two_right_sidebars = TEXT
                 pagets__two_right_sidebars.value = TwoRightSidebars
+                pagets__restaurant_home = TEXT
+                pagets__restaurant_home.value = RestaurantHome
                 default = TEXT
                 default.value = FullWidth
             }
