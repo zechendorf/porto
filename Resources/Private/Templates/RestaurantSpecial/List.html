@@ -1,0 +1,16 @@
+<f:if condition="{specials->f:count()}">
+    <ul class="special-menu pb-xlg">
+        <f:for each="{specials}" as="special">
+            <li>
+                <f:image src="{special.image.uid}" treatIdAsReference="1" width="68c" height="68c" class="img-responsive" alt="{special.title}" />
+                <h3>{special.title} <em>{special.subtitle}</em></h3>
+                <p><span>{special.content}</span></p>
+                <strong class="special-menu-price text-color-dark">
+                    <f:format.number decimals="2" decimalSeparator="," thousandsSeparator=".">
+                        {special.price}
+                    </f:format.number> €
+                </strong>
+            </li>
+        </f:for>
+    </ul>
+</f:if>
