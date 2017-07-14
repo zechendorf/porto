@@ -10,8 +10,8 @@ plugin.tx_porto.template{
     # cat=porto; label = Where are the Porto Theme files?
     files = fileadmin/Porto/HTML/
 
-    # cat=porto; label = Skin; type=options[Default=Default,Restaurant=Restaurant]
-    skin = Default
+    # cat=porto; label = Skin; type=options[Default=default,Restaurant=skin-restaurant]
+    skin = default
 
     # cat=porto; type=boolean; label= Boxed layout?
     boxed = 0
