@@ -36,6 +36,9 @@
       <trans-unit id="backend_layout.restaurant_home">
         <source>Restaurant Home</source>
       </trans-unit>
+      <trans-unit id="backend_layout.column.header">
+        <source>Header</source>
+      </trans-unit>
       <trans-unit id="backend_layout.column.slider">
         <source>Slider</source>
       </trans-unit>
