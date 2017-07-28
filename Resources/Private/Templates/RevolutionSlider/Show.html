@@ -1,0 +1,46 @@
+<div class="slider-container rev_slider_wrapper" style="height: 650px;">
+    <div id="revolutionSlider-{contentObject.uid}" class="slider rev_slider" data-plugin-revolution-slider data-plugin-options="{'delay': 15000, 'gridwidth': 1170, 'gridheight': 650, 'disableProgressBar': 'on'}">
+        <ul>
+            <f:for each="{sliderElements}" as="sliderElement">
+                <li data-transition="fade">
+                    <f:image
+                        src="{sliderElement.image.uid}" treatIdAsReference="1"
+                        maxWidth="1920"
+                        alt=""
+                        data="{bgposition:'center center',bgfit:'cover',bgrepeat:'no-repeat'}"
+                        class="rev-slidebg"
+                        />
+
+                    <div class="tp-caption top-label alternative-font"
+                        data-x="left" data-hoffset="25"
+                        data-y="center" data-voffset="-55"
+                        data-start="500"
+                        data-width="600"
+                        style="z-index: 5"
+                        data-transform_in="y:[-300%];opacity:0;s:500;" style="width: 600px">{sliderElement.subtitle}</div>
+
+                    <div class="tp-caption main-label"
+                        data-x="left" data-hoffset="25"
+                        data-y="center" data-voffset="-5"
+                        data-start="1000"
+                        data-whitespace="nowrap"
+                        data-transform_in="y:[100%];s:500;"
+                        data-transform_out="opacity:0;s:500;"
+                        data-width="600"
+                        style="z-index: 5"
+                        data-mask_in="x:0px;y:0px;" style="width: 600px">{sliderElement.title}</div>
+
+                    <div class="tp-caption bottom-label"
+                        data-x="left" data-hoffset="25"
+                        data-y="center" data-voffset="60"
+                        data-start="1500"
+                        data-width="600"
+                        style="z-index: 5"
+                        data-transform_in="y:[100%];opacity:0;s:500;" style="font-size: 1.2em;width: 600px">
+                        <f:format.stripTags>{sliderElement.content}</f:format.stripTags>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </div>
+</div>

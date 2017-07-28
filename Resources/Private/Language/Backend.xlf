@@ -30,11 +30,20 @@
       <trans-unit id="backend_layout.two_right_sidebars">
         <source>Two right sidebars</source>
       </trans-unit>
+      <trans-unit id="backend_layout.restaurant_home">
+        <source>Restaurant Home</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.slider">
+        <source>Slider</source>
+      </trans-unit>
       <trans-unit id="backend_layout.column.content">
         <source>Content</source>
       </trans-unit>
       <trans-unit id="backend_layout.column.left">
         <source>Left</source>
+      </trans-unit>
+      <trans-unit id="backend_layout.column.center">
+        <source>Center</source>
       </trans-unit>
       <trans-unit id="backend_layout.column.right">
         <source>Right</source>
