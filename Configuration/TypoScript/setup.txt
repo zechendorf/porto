@@ -65,6 +65,8 @@ page{
                 key.override.field = backend_layout
                 pagets__left_and_right_sidebar = TEXT
                 pagets__left_and_right_sidebar.value = LeftRightSidebar
+                pagets__left_and_right = TEXT
+                pagets__left_and_right.value = LeftRight
                 pagets__left_sidebar = TEXT
                 pagets__left_sidebar.value = LeftSidebar
                 pagets__right_sidebar = TEXT

@@ -24,6 +24,9 @@
       <trans-unit id="backend_layout.left_and_right_sidebar">
         <source>Left and right sidebar</source>
       </trans-unit>
+      <trans-unit id="backend_layout.left_and_right">
+        <source>Left and right 50/50</source>
+      </trans-unit>
       <trans-unit id="backend_layout.right_sidebar">
         <source>Right sidebar</source>
       </trans-unit>
