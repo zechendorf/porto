@@ -2,29 +2,29 @@
 #### BACKENDLAYOUT: FULL-WIDTH ####
 ###################################
 mod {
-  web_layout {
-    BackendLayouts {
-      full_width {
-        title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.full_width
-        config {
-           backend_layout {
-            colCount = 1
-            rowCount = 1
-            rows{
-              1{
-                columns{
-                  1{
-                    name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.content
-                    colPos = 0
-                    colspan = 1
-                  }
+    web_layout {
+        BackendLayouts {
+            full_width {
+                title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.full_width
+                config {
+                     backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows{
+                            1{
+                                columns{
+                                    1{
+                                        name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.content
+                                        colPos = 0
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-              }
+                icon = EXT:porto/Resources/Public/Images/BackendLayouts/full-width.gif
             }
-          }
         }
-        icon = EXT:porto/Resources/Public/Images/BackendLayouts/full-width.gif
-      }
     }
-  }
 }
