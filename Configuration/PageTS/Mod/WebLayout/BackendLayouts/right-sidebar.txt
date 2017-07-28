@@ -20,7 +20,7 @@ mod {
                   }
                   2{
                     name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.right
-                    colPos = 1
+                    colPos = 2
                     colspan = 1
                   }
                 }
