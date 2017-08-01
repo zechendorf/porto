@@ -90,6 +90,9 @@
       <trans-unit id="form.searchFor">
         <source>Search for...</source>
       </trans-unit>
+      <trans-unit id="pages.tca.no_page_header">
+        <source>No PageHeader on this page</source>
+      </trans-unit>
     </body>
   </file>
 </xliff>
