@@ -12,6 +12,13 @@ if (!defined('TYPO3_MODE')) {
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
     'ZECHENDORF.' . $_EXTKEY,
+    'IconBox',
+    array('IconBox' => 'show'),
+    array()
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
     'RestaurantSpecials',
     array('RestaurantSpecial' => 'list'),
     array()
