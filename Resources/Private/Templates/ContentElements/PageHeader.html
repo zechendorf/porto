@@ -1,0 +1,37 @@
+<f:switch expression="{data.layout}">
+    <f:case value="1">
+        <f:if condition="{gallery.rows}">
+            <f:for each="{gallery.rows}" as="row" iteration="rowIterator">
+                <f:if condition="{rowIterator.isFirst}">
+                    <f:for each="{row.columns}" as="column" iteration="columnIterator">
+                        <f:if condition="{columnIterator.isFirst}">
+                            <section class="page-header page-header-custom-background parallax" data-plugin-parallax data-plugin-options="{'speed': 1.5}" data-image-src="{f:uri.image(src:column.media.uid,treatIdAsReference:1)}">
+                        </f:if>
+                    </f:for>
+                </f:if>
+            </f:for>
+        </f:if>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>
+                            {data.header}
+                            <f:if condition="{data.subheader}">
+                                <span>{data.subheader}</span>
+                            </f:if>
+                        </h1>
+                        <!--
+                            <ul class="breadcrumb breadcrumb-valign-mid">
+                                <li><a href="#">Features</a></li>
+                                <li class="active">Header Custom Background</li>
+                            </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </f:case>
+    <f:case default="true">
+        <!-- default header -->
+    </f:case>
+</f:switch>

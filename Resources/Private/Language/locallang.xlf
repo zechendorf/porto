@@ -51,6 +51,18 @@
       <trans-unit id="porto_newcontentelement.wizard.title">
         <source>Testimonial</source>
       </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.title">
+        <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header">
+        <source>PageHeader</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.page_header_title">
+        <source>PageHeader</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.page_header_description">
+        <source>Renders a PageHeader</source>
+      </trans-unit>
       <trans-unit id="porto_newcontentelement.wizard.description">
         <source>Renders a testimonial (quote).</source>
       </trans-unit>
@@ -65,6 +77,15 @@
       </trans-unit>
       <trans-unit id="porto_testimonial.photo">
         <source>Photo</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header.subtitle">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header.image">
+        <source>Image</source>
       </trans-unit>
       <trans-unit id="form.searchFor">
         <source>Search for...</source>

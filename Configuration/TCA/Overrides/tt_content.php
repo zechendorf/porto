@@ -50,5 +50,40 @@ $GLOBALS['TCA']['tt_content']['types']['porto_testimonial'] = array(
 );
 
 
+// porto_page_header
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+    array(
+        'LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_page_header',
+        'porto_page_header',
+        'EXT:porto/Resources/Public/Icons/ContentElements/porto_page_header.png'
+    ),
+    'CType',
+    'porto_page_header'
+);
+
+$GLOBALS['TCA']['tt_content']['types']['porto_page_header'] = array(
+    'columnsOverrides' => array(
+        'layout' => array(
+            'config' => array(
+                'items' => array(
+                    // array('Default', 0),
+                    array('Parallax', 1)
+                )
+            )
+        )
+    ),
+    'showitem' => '
+        --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:palette.general;general,
+            layout,
+            header;LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_page_header.title,
+            subheader;LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_page_header.subtitle,
+            image;LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_page_header.image,
+        --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
+            --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,'
+);
+
+
 
 

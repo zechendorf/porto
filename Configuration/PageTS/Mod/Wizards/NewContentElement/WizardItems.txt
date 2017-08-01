@@ -8,6 +8,14 @@ mod.wizards.newContentElement.wizardItems.common {
                 CType = porto_testimonial
             }
         }
+        porto_page_header {
+            iconIdentifier = porto_page_header
+            title = LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_newcontentelement.wizard.page_header_title
+            description = LLL:EXT:porto/Resources/Private/Language/locallang.xlf:porto_newcontentelement.wizard.page_header_description
+            tt_content_defValues {
+                CType = porto_page_header
+            }
+        }
     }
-    show := addToList(porto_testimonial)
+    show := addToList(porto_testimonial, porto_page_header)
 }
