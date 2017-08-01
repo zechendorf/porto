@@ -570,6 +570,12 @@ tt_content {
         dataProcessing.10.references.fieldName = image
         templateName = Testimonial
     }
+    porto_page_header < lib.fluidContent
+    porto_page_header {
+        dataProcessing < tt_content.textmedia.dataProcessing
+        dataProcessing.10.references.fieldName = image
+        templateName = PageHeader
+    }
 }
 
 ########################
