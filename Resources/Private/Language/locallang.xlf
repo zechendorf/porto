@@ -12,6 +12,21 @@
       <trans-unit id="tx_porto_domain_model_accordion.content">
         <source>Content</source>
       </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox">
+        <source>Icon Box</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.color">
+        <source>Color</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.icon">
+        <source>Icon (Fontawesome)</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.content">
+        <source>Content</source>
+      </trans-unit>
       <trans-unit id="tx_porto_domain_model_revolutionslider">
         <source>Revolution Slider</source>
       </trans-unit>
