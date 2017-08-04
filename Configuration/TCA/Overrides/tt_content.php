@@ -84,6 +84,11 @@ $GLOBALS['TCA']['tt_content']['types']['porto_page_header'] = array(
             --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,'
 );
 
+$GLOBALS['TCA']['tt_content']['types']['image']['columnsOverrides']['layout']['config']['items'] = array(
+    array('Default', 0),
+    array('Team List', 1)
+);
+
 
 
 

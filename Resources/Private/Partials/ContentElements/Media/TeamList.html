@@ -1,0 +1,57 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:ce="http://typo3.org/ns/TYPO3/CMS/FluidStyledContent/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{gallery.rows}">
+    <div class="row">
+        <ul class="team-list sort-destination" data-sort-id="team">
+            <f:for each="{gallery.rows}" as="row">
+                <f:for each="{row.columns}" as="column">
+                    <f:switch expression="{gallery.count.columns}">
+                        <f:case value="1">
+                            <li class="col-xs-12 isotope-item">
+                        </f:case>
+                        <f:case value="2">
+                            <li class="col-md-6 col-sm-6 col-xs-12 isotope-item">
+                        </f:case>
+                        <f:case value="3">
+                            <li class="col-md-4 col-sm-6 col-xs-12 isotope-item">
+                        </f:case>
+                        <f:case value="4">
+                            <li class="col-md-3 col-sm-6 col-xs-12 isotope-item">
+                        </f:case>
+                        <f:case value="6">
+                            <li class="col-md-2 col-sm-6 col-xs-12 isotope-item">
+                        </f:case>
+                        <f:defaultCase>
+                            <li>
+                        </f:defaultCase>
+                    </f:switch>
+                        <span class="thumb-info thumb-info-hide-wrapper-bg mb-xlg">
+                            <span class="thumb-info-wrapper">
+                                <f:if condition="{column.media.link}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{column.media.link}" title="{column.media.title}">
+                                            <f:render section="thumb-info-wrapper" arguments="{_all}" />
+                                        </f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <f:render section="thumb-info-wrapper" arguments="{_all}" />
+                                    </f:else>
+                                </f:if>
+                            </span>
+                            <span class="thumb-info-caption">
+                                <span class="thumb-info-caption-text">{column.media.description}</span>
+                            </span>
+                        </span>
+                    </li>
+                </f:for>
+            </f:for>
+        </ul>
+    </ul>
+</f:if>
+
+<f:section name="thumb-info-wrapper">
+    <f:media class="img-responsive" file="{column.media}" width="{column.dimensions.width}" height="{column.dimensions.height}" alt="{column.media.alternative}" title="{colum.media.title}" />
+    <span class="thumb-info-title">
+        <span class="thumb-info-inner">{column.media.title}</span>
+        <span class="thumb-info-type">{column.media.alternative}</span>
+    </span>
+</f:section>

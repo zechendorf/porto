@@ -544,10 +544,10 @@ lib.metaNav{
     }
 }
 
-######################
-#### FLUIDCONTENT ####
-######################
-lib.fluidContent{
+########################
+#### CONTENTELEMENT ####
+########################
+lib.contentElement{
     templateRootPaths {
         20 = EXT:porto/Resources/Private/Templates/ContentElements/
     }
