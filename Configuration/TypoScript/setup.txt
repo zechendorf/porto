@@ -559,6 +559,8 @@ lib.contentElement{
     }
 }
 
+lib.fluidContent < lib.contentElement
+
 
 ####################
 #### TT_CONTENT ####
