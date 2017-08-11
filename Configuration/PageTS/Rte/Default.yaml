@@ -11,6 +11,10 @@ editor:
 
     stylesSet:
       - { name: "Lead", element: "p", attributes: { 'class': 'lead' }}
+      - { name: "Button (primary)", element: "a", attributes: { 'class': 'btn btn-primary' }}
+      - { name: "Button (secondary)", element: "a", attributes: { 'class': 'btn btn-secondary' }}
+      - { name: "Button (tertiary)", element: "a", attributes: { 'class': 'btn btn-tertiary' }}
+      - { name: "Button (quaternary)", element: "a", attributes: { 'class': 'btn btn-quaternary' }}
 
     toolbarGroups:
       - { name: styles, groups: [ styles, format ] }

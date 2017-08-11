@@ -158,7 +158,8 @@ return array(
             'label' => 'LLL:EXT:porto/Resources/Private/Language/locallang.xlf:tx_porto_domain_model_iconbox.content',
             'config' => array(
                 'type' => 'text',
-                'enableRichtext' => true
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'porto_default'
             ),
         ),
     )
