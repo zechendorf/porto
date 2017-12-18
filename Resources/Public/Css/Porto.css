@@ -6,3 +6,18 @@ img{
 table.ce-table p{
     margin: 0;
 }
+
+.ce-border .thumb-info img,
+.ce-border .thumb-info iframe {
+    border: none;
+}
+
+@media (max-width:767px) {
+    .ce-right .ce-gallery,
+    .ce-left .ce-gallery {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+        float: none;
+    }
+}
