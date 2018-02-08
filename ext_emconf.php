@@ -7,12 +7,12 @@ https://goo.gl/MpLeUN',
     'category' => 'plugin',
     'author' => 'Christopher Zechendorf',
     'author_email' => 'christopher@zechendorf.com',
-    'state' => 'stable',
+    'state' => 'alpha',
     'internal' => '',
     'uploadfolder' => '1',
     'createDirs' => '',
     'clearCacheOnLoad' => 1,
-    'version' => '1.0.0',
+    'version' => '6.0.0',
     'constraints' => array(
         'depends' => array(
             'typo3' => '8.7.0-8.7.99'
