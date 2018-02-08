@@ -1,0 +1,57 @@
+<header id="header" class="header-narrow" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 53, 'stickySetTop': '-53px', 'stickyChangeLogo': false}">
+    <div class="header-body">
+        <div class="header-top header-top-secondary header-top-style-3">
+            <div class="container">
+                <nav class="header-nav-top pull-right">
+                    <ul class="nav nav-pills">
+                        <f:if condition="{headerAddress}">
+                            <li class="hidden-xs">
+                                <span class="ws-nowrap"><i class="fa fa-map-marker"></i> {headerAddress}</span>
+                            </li>
+                        </f:if>
+                        <f:if condition="{headerPhoneNr}">
+                            <li>
+                                <span class="ws-nowrap"><i class="fa fa-phone"></i> {headerPhoneNr}</span>
+                            </li>
+                        </f:if>
+                        <f:if condition="{headerEmail}">
+                            <li class="hidden-xs">
+                                <span class="ws-nowrap"><i class="fa fa-envelope"></i> <f:link.email email="{headerEmail}">{headerEmail}</f:link.email></span>
+                            </li>
+                        </f:if>
+                    </ul>
+                </nav>
+                <f:if condition="{headerClaim}">
+                    <p class="hidden-xs text-color-tertiary">
+                        {headerClaim}
+                    </p>
+                </f:if>
+            </div>
+        </div>
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-logo">
+                        <f:link.page pageUid="{homepageUid}">
+                            <img alt="{headerLogoAlt}" width="116" height="50" src="{headerLogoFile}">
+                        </f:link.page>
+                    </div>
+                </div>
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-nav">
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                                <nav>
+                                    <f:cObject typoscriptObjectPath="lib.mainNav" />
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

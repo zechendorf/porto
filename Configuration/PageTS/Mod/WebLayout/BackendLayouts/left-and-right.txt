@@ -4,23 +4,32 @@
 mod {
     web_layout {
         BackendLayouts {
-            left_and_right_sidebar {
-                title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.left_and_right_sidebar
+            left_and_right {
+                title = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.left_and_right
                 config {
                      backend_layout {
-                        colCount = 4
-                        rowCount = 2
+                        colCount = 2
+                        rowCount = 3
                         rows{
                             1{
                                 columns{
                                     1{
                                         name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.header
                                         colPos = 10
-                                        colspan = 4
+                                        colspan = 2
                                     }
                                 }
                             }
                             2{
+                                columns{
+                                    1{
+                                        name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.content
+                                        colPos = 0
+                                        colspan = 2
+                                    }
+                                }
+                            }
+                            3{
                                 columns{
                                     1{
                                         name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.left
@@ -28,11 +37,6 @@ mod {
                                         colspan = 1
                                     }
                                     2{
-                                        name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.content
-                                        colPos = 0
-                                        colspan = 2
-                                    }
-                                    3{
                                         name = LLL:EXT:porto/Resources/Private/Language/Backend.xlf:backend_layout.column.right
                                         colPos = 2
                                         colspan = 1
@@ -42,7 +46,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:porto/Resources/Public/Images/BackendLayouts/left-and-right-sidebar.gif
+                icon = EXT:porto/Resources/Public/Images/BackendLayouts/left-and-right.gif
             }
         }
     }

@@ -59,34 +59,40 @@ page{
         partialRootPaths.10 = EXT:porto/Resources/Private/Partials/Page
         templateRootPaths.10 = EXT:porto/Resources/Private/Templates/Page
         variables{
-      pageLayoutPartial = CASE
-      pageLayoutPartial{
-        key.data = levelfield:-1, backend_layout_next_level, slide
-        key.override.field = backend_layout
-        pagets__left_and_right_sidebar = TEXT
-        pagets__left_and_right_sidebar.value = LeftRightSidebar
-        pagets__left_sidebar = TEXT
-        pagets__left_sidebar.value = LeftSidebar
-        pagets__right_sidebar = TEXT
-        pagets__right_sidebar.value = RightSidebar
-        pagets__two_right_sidebars = TEXT
-        pagets__two_right_sidebars.value = TwoRightSidebars
-        default = TEXT
-        default.value = FullWidth
-      }
+            pageLayoutPartial = CASE
+            pageLayoutPartial{
+                key.data = levelfield:-1, backend_layout_next_level, slide
+                key.override.field = backend_layout
+                pagets__left_and_right_sidebar = TEXT
+                pagets__left_and_right_sidebar.value = LeftRightSidebar
+                pagets__left_and_right = TEXT
+                pagets__left_and_right.value = LeftRight
+                pagets__left_sidebar = TEXT
+                pagets__left_sidebar.value = LeftSidebar
+                pagets__right_sidebar = TEXT
+                pagets__right_sidebar.value = RightSidebar
+                pagets__two_right_sidebars = TEXT
+                pagets__two_right_sidebars.value = TwoRightSidebars
+                pagets__restaurant_home = TEXT
+                pagets__restaurant_home.value = RestaurantHome
+                default = TEXT
+                default.value = FullWidth
+            }
             imagePath = TEXT
             imagePath.value = typo3conf/ext/porto/Resources/Public/Images
             imagePath.value.stdWrap.insertData = 1
             baseURL = TEXT
             baseURL.value =
+            skin = TEXT
+            skin.value = {$plugin.tx_porto.template.skin}
             headerLogoFile = TEXT
             headerLogoFile.value = {$plugin.tx_porto.header.logo.file}
             headerLogoAlt = TEXT
             headerLogoAlt.value = {$plugin.tx_porto.header.logo.alt}
             headerLogoBig = TEXT
             headerLogoBig.value = {$plugin.tx_porto.header.logo.big}
-      headerNavType = TEXT
-      headerNavType.value = {$plugin.tx_porto.template.headerNavType}
+            headerNavType = TEXT
+            headerNavType.value = {$plugin.tx_porto.template.headerNavType}
             pageHeaderClass = TEXT
             pageHeaderClass.value =
             footerLogoFile = TEXT
@@ -97,36 +103,52 @@ page{
             homepageUid.value = {$plugin.tx_porto.navigation.homepageUid}
             headerPhoneNr = TEXT
             headerPhoneNr.value = {$plugin.tx_porto.header.phone}
-      headerTemplate = TEXT
+            headerEmail = TEXT
+            headerEmail.value = {$plugin.tx_porto.header.email}
+            headerAddress = TEXT
+            headerAddress.value = {$plugin.tx_porto.header.address}
+            headerClaim = TEXT
+            headerClaim.value = {$plugin.tx_porto.header.claim}
+            headerTemplate = TEXT
             headerTemplate.value = {$plugin.tx_porto.template.header}
-      pageHeaderTemplate = TEXT
+            pageHeaderTemplate = TEXT
             pageHeaderTemplate.value = {$plugin.tx_porto.template.pageHeader}
-      pageHeaderColor = TEXT
-      pageHeaderColor.value = {$plugin.tx_porto.template.pageHeaderColor}
-      pageHeaderMorePadding = TEXT
-      pageHeaderMorePadding.value = {$plugin.tx_porto.template.pageHeaderMorePadding}
-      footerLayout = TEXT
+            pageHeaderColor = TEXT
+            pageHeaderColor.value = {$plugin.tx_porto.template.pageHeaderColor}
+            pageHeaderMorePadding = TEXT
+            pageHeaderMorePadding.value = {$plugin.tx_porto.template.pageHeaderMorePadding}
+            footerLayout = TEXT
             footerLayout.value = {$plugin.tx_porto.footer.layout}
-      footerFromPage = TEXT
+            footerFromPage = TEXT
             footerFromPage.value = {$plugin.tx_porto.footer.fromPage}
-      footerLogo = TEXT
+            footerLogo = TEXT
             footerLogo.value = {$plugin.tx_porto.footer.logo}
-      footerBackground = TEXT
+            footerBackground = TEXT
             footerBackground.value = {$plugin.tx_porto.footer.background}
-      navigationMainNavRoot = TEXT
-      navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
-      navigationMetaNavRoot = TEXT
-      navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
-      headerSearchShow = TEXT
-      headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
-      headerSearchPid = TEXT
-      headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
-      headerSocialmedia = TEXT
-      headerSocialmedia.value = {$plugin.tx_porto.header.socialmedia}
-      headerFacebookUrl = TEXT
-      headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
-      headerTwitterUrl = TEXT
-      headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            navigationMainNavRoot = TEXT
+            navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
+            navigationMetaNavRoot = TEXT
+            navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
+            headerSearchShow = TEXT
+            headerSearchShow.value = {$plugin.tx_porto.header.searchShow}
+            headerSearchPid = TEXT
+            headerSearchPid.value = {$plugin.tx_porto.header.searchPid}
+            headerSocialmedia = TEXT
+            headerSocialmedia.value = {$plugin.tx_porto.header.socialmedia}
+            headerFacebookUrl = TEXT
+            headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
+            headerTwitterUrl = TEXT
+            headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            facebookUrl = TEXT
+            facebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
+            twitterUrl = TEXT
+            twitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            instagramUrl = TEXT
+            instagramUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            googleplusUrl = TEXT
+            googleplusUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            linkedinUrl = TEXT
+            linkedinUrl.value = {$plugin.tx_porto.header.twitterUrl}
         }
     }
 
@@ -246,43 +268,44 @@ page{
     includeCSS{
         googleFonts = https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light
         googleFonts.external = 1
-    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/css/bootstrap.min.css
-    font-awesome = {$plugin.tx_porto.template.files}vendor/font-awesome/css/font-awesome.min.css
-    animate = {$plugin.tx_porto.template.files}vendor/animate/animate.min.css
-    simple-line-icons = {$plugin.tx_porto.template.files}vendor/simple-line-icons/css/simple-line-icons.min.css
-    owl-carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.carousel.min.css
-    owl-default = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.theme.default.min.css
-    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/magnific-popup.min.css
-    theme = {$plugin.tx_porto.template.files}css/theme.css
-    elements = {$plugin.tx_porto.template.files}css/theme-elements.css
-    blog = {$plugin.tx_porto.template.files}css/theme-blog.css
-    shop = {$plugin.tx_porto.template.files}css/theme-shop.css
-    default = {$plugin.tx_porto.template.files}css/skins/default.css
-    custom = {$plugin.tx_porto.template.files}css/custom.css
+        bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/css/bootstrap.min.css
+        font-awesome = {$plugin.tx_porto.template.files}vendor/font-awesome/css/font-awesome.min.css
+        animate = {$plugin.tx_porto.template.files}vendor/animate/animate.min.css
+        simple-line-icons = {$plugin.tx_porto.template.files}vendor/simple-line-icons/css/simple-line-icons.min.css
+        owl-carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.carousel.min.css
+        owl-default = {$plugin.tx_porto.template.files}vendor/owl.carousel/assets/owl.theme.default.min.css
+        magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/magnific-popup.min.css
+        theme = {$plugin.tx_porto.template.files}css/theme.css
+        elements = {$plugin.tx_porto.template.files}css/theme-elements.css
+        blog = {$plugin.tx_porto.template.files}css/theme-blog.css
+        shop = {$plugin.tx_porto.template.files}css/theme-shop.css
+        skin = {$plugin.tx_porto.template.files}css/skins/{$plugin.tx_porto.template.skin}.css
+        tx_porto = EXT:porto/Resources/Public/Css/Porto.css
+        custom = {$plugin.tx_porto.template.files}css/custom.css
     }
     includeJS{
-    modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
+        modernizr = {$plugin.tx_porto.template.files}vendor/modernizr/modernizr.min.js
     }
-  includeJSFooter{
-<!-- Vendor -->
-    jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
-    appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
-    easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
-    cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
-    bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
-    common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
-    validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
-    easy-pie-chart = {$plugin.tx_porto.template.files}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
-    gmap = {$plugin.tx_porto.template.files}vendor/jquery.gmap/jquery.gmap.min.js
-    lazyload = {$plugin.tx_porto.template.files}vendor/jquery.lazyload/jquery.lazyload.min.js
-    isotope = {$plugin.tx_porto.template.files}vendor/isotope/jquery.isotope.min.js
-    carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/owl.carousel.min.js
-    magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/jquery.magnific-popup.min.js
-    vide = {$plugin.tx_porto.template.files}vendor/vide/vide.min.js
-    theme = {$plugin.tx_porto.template.files}js/theme.js
-    custom = {$plugin.tx_porto.template.files}js/custom.js
-    init = {$plugin.tx_porto.template.files}js/theme.init.js
-  }
+    includeJSFooterlibs{
+        jquery = {$plugin.tx_porto.template.files}vendor/jquery/jquery.min.js
+        jquery.forceOnTop = 1
+        appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
+        easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
+        cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
+        bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
+        common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
+        validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
+        easy-pie-chart = {$plugin.tx_porto.template.files}vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.min.js
+        gmap = {$plugin.tx_porto.template.files}vendor/jquery.gmap/jquery.gmap.min.js
+        lazyload = {$plugin.tx_porto.template.files}vendor/jquery.lazyload/jquery.lazyload.min.js
+        isotope = {$plugin.tx_porto.template.files}vendor/isotope/jquery.isotope.min.js
+        carousel = {$plugin.tx_porto.template.files}vendor/owl.carousel/owl.carousel.min.js
+        magnific-popup = {$plugin.tx_porto.template.files}vendor/magnific-popup/jquery.magnific-popup.min.js
+        vide = {$plugin.tx_porto.template.files}vendor/vide/vide.min.js
+        theme = {$plugin.tx_porto.template.files}js/theme.js
+        custom = {$plugin.tx_porto.template.files}js/custom.js
+        init = {$plugin.tx_porto.template.files}js/theme.init.js
+    }
 }
 
 
@@ -339,30 +362,30 @@ config {
 
   // HTML tag
     htmlTag_setParams =
-  htmlTag_stdWrap{
-    setContentToCurrent = 1
-    cObject = COA
-    cObject{
-      wrap = <html|>
-      10 = TEXT
-      10{
-        value = no-js
-        value.override = no-js boxed
-        value.override.if{
-          insertData = 1
-          value = {$plugin.tx_porto.template.boxed}
-          equals = 1
+    htmlTag_stdWrap{
+        setContentToCurrent = 1
+        cObject = COA
+        cObject{
+            wrap = <html|>
+            10 = TEXT
+            10{
+                value = no-js
+                value.override = no-js boxed
+                value.override.if{
+                    insertData = 1
+                    value = {$plugin.tx_porto.template.boxed}
+                    equals = 1
+                }
+                noTrimWrap = | class="|"|
+            }
+            20 = TEXT
+            20.value = de
+            20.noTrimWrap = | lang="|"|="|"|
+            30 = TEXT
+            30.value = ltr
+            30.noTrimWrap = | dir="|"|
         }
-        noTrimWrap = | class="|"|
-      }
-      20 = TEXT
-      20.value = de
-      20.noTrimWrap = | lang="|"|="|"|
-      30 = TEXT
-      30.value = ltr
-      30.noTrimWrap = | dir="|"|
     }
-  }
 
     // Compression and Concatenation of CSS and JS Files
     compressJs = {$config.compressJs}
@@ -515,14 +538,16 @@ lib.metaNav{
         NO{
             stdWrap.wrap = <i class="fa fa-angle-right"></i>|
             wrapItemAndSub = <li class="hidden-xs">|</li>
+            ATagParams = target="{field:target}"
+            ATagParams.insertData = 1
         }
     }
 }
 
-######################
-#### FLUIDCONTENT ####
-######################
-lib.fluidContent{
+########################
+#### CONTENTELEMENT ####
+########################
+lib.contentElement{
     templateRootPaths {
         20 = EXT:porto/Resources/Private/Templates/ContentElements/
     }
@@ -534,6 +559,8 @@ lib.fluidContent{
     }
 }
 
+lib.fluidContent < lib.contentElement
+
 
 ####################
 #### TT_CONTENT ####
@@ -544,6 +571,12 @@ tt_content {
         dataProcessing < tt_content.textmedia.dataProcessing
         dataProcessing.10.references.fieldName = image
         templateName = Testimonial
+    }
+    porto_page_header < lib.fluidContent
+    porto_page_header {
+        dataProcessing < tt_content.textmedia.dataProcessing
+        dataProcessing.10.references.fieldName = image
+        templateName = PageHeader
     }
 }
 

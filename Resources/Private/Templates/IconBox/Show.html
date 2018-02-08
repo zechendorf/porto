@@ -1,0 +1,38 @@
+<f:if condition="{settings.flat}">
+    <f:then><div class="featured-boxes featured-boxes-style-{settings.style} featured-boxes-flat"></f:then>
+    <f:else><div class="featured-boxes featured-boxes-style-{settings.style}"></f:else>
+</f:if>
+    <div class="row">
+        <f:for each="{elements}" as="element">
+            <f:switch expression="{settings.columns}">
+                <f:case value="2"><div class="col-xs-12 col-md-6"></f:case>
+                <f:case value="3"><div class="col-xs-12 col-md-4"></f:case>
+                <f:case value="4"><div class="col-xs-12 col-md-3"></f:case>
+                <f:case default="true"><div class="col-xs-12"></f:case>
+            </f:switch>
+                <f:if condition="{settings.style}<=7">
+                    <f:then>
+                        <div class="featured-box featured-box-{element.color} featured-box-effect-{settings.effect}">
+                            <div class="box-content">
+                                <f:if condition="{element.icon}"><i class="icon-featured fa fa-{element.icon}"></i></f:if>
+                                <f:if condition="{element.title}"><h4>{element.title}</h4></f:if>
+                                <f:format.html>{element.content}</f:format.html>
+                            </div>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <div class="feature-box">
+                            <div class="feature-box-icon">
+                                <f:if condition="{element.icon}"><i class="fa fa-{element.icon}"></i></f:if>
+                            </div>
+                            <div class="feature-box-info">
+                                <f:if condition="{element.title}"><h4>{element.title}</h4></f:if>
+                                <f:format.html>{element.content}</f:format.html>
+                            </div>
+                        </div>
+                    </f:else>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+</div>

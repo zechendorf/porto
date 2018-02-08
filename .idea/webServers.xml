@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2674a242-28be-4965-8ee0-5faea1e5f7fe" name="server001.zechendorf.xyz" url="http://server001.zechendorf.xyz">
+        <fileTransfer host="server001.zechendorf.xyz" port="22" privateKey="$USER_HOME$/.ssh/id_rsa" rootFolder="/var/www/dr-gumpert.zechendorf.xyz/typo3conf/ext/porto" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -7,16 +7,76 @@
         <source>Accordion</source>
       </trans-unit>
       <trans-unit id="tx_porto_domain_model_accordion.title">
-        <source>Titel</source>
+        <source>Title</source>
       </trans-unit>
       <trans-unit id="tx_porto_domain_model_accordion.content">
         <source>Content</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox">
+        <source>Icon Box</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.color">
+        <source>Color</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.icon">
+        <source>Icon (Fontawesome)</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_iconbox.content">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_revolutionslider">
+        <source>Revolution Slider</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_revolutionslider.subtitle">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_revolutionslider.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_revolutionslider.image">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_revolutionslider.content">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial">
+        <source>Restaurant Special</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial.subtitle">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial.image">
+        <source>Image</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial.content">
+        <source>Content</source>
+      </trans-unit>
+      <trans-unit id="tx_porto_domain_model_restaurantspecial.price">
+        <source>Price</source>
       </trans-unit>
       <trans-unit id="porto_newcontentelement.title">
         <source>Testimonial</source>
       </trans-unit>
       <trans-unit id="porto_newcontentelement.wizard.title">
         <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.title">
+        <source>Testimonial</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header">
+        <source>PageHeader</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.page_header_title">
+        <source>PageHeader</source>
+      </trans-unit>
+      <trans-unit id="porto_newcontentelement.wizard.page_header_description">
+        <source>Renders a PageHeader</source>
       </trans-unit>
       <trans-unit id="porto_newcontentelement.wizard.description">
         <source>Renders a testimonial (quote).</source>
@@ -33,8 +93,20 @@
       <trans-unit id="porto_testimonial.photo">
         <source>Photo</source>
       </trans-unit>
+      <trans-unit id="porto_page_header.title">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header.subtitle">
+        <source>Subtitle</source>
+      </trans-unit>
+      <trans-unit id="porto_page_header.image">
+        <source>Image</source>
+      </trans-unit>
       <trans-unit id="form.searchFor">
         <source>Search for...</source>
+      </trans-unit>
+      <trans-unit id="pages.tca.no_page_header">
+        <source>No PageHeader on this page</source>
       </trans-unit>
     </body>
   </file>

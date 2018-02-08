@@ -28,16 +28,16 @@ namespace ZECHENDORF\Porto\Controller;
 /**
  * The Controller for Accordions
  */
-class AccordionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+class IconBoxController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
-     * accordionRepository
+     * iconBoxRepository
      *
-     * @var \ZECHENDORF\Porto\Domain\Repository\AccordionRepository
+     * @var \ZECHENDORF\Porto\Domain\Repository\IconBoxRepository
      * @inject
      *
      */
-    protected $accordionRepository = null;
+    protected $iconBoxRepository = null;
 
     /**
      * action show
@@ -48,10 +48,10 @@ class AccordionController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         if($this->settings['entries']){
             $uids = explode(',',$this->settings['entries']);
             foreach($uids as $uid){
-                $accordionElements[] = $this->accordionRepository->findByUid($uid);
+                $elements[] = $this->iconBoxRepository->findByUid($uid);
             }
         }
-        $this->view->assign('accordionElements', $accordionElements);
+        $this->view->assign('elements', $elements);
         $this->view->assign('settings', $this->settings);
         $this->view->assign('contentObject', $this->configurationManager->getContentObject()->data);
     }

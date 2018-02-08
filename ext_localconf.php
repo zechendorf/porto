@@ -10,6 +10,27 @@ if (!defined('TYPO3_MODE')) {
     array()
 );
 
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'IconBox',
+    array('IconBox' => 'show'),
+    array()
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'RestaurantSpecials',
+    array('RestaurantSpecial' => 'list'),
+    array()
+);
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+    'ZECHENDORF.' . $_EXTKEY,
+    'RevolutionSlider',
+    array('RevolutionSlider' => 'show'),
+    array()
+);
+
 // TCEMAIN
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/TCEMAIN.txt">');
 
@@ -26,3 +47,6 @@ if (!defined('TYPO3_MODE')) {
 
 // RTE Config
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['porto_default'] = 'EXT:porto/Configuration/PageTS/Rte/Default.yaml';
+
+// PAge tree: use nav_title
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('options.pageTree.showNavTitle = 1');

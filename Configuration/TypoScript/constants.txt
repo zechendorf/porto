@@ -7,29 +7,32 @@
 ### TEMPLATE ###
 ################
 plugin.tx_porto.template{
-  # cat=porto; label = Where are the Porto Theme files?
-  files = fileadmin/Porto/HTML/
-  
-  # cat=porto; type=boolean; label= Boxed layout?
-  boxed = 0
-  
-  #cat=porto; type=color; label = Theme color
-  themeColor = 
-  
-  # cat=porto; label = Header Layout; type=options[Default=Default,Flat=Flat,Flat with Top Bar=FlatTopBar,With Navigation Bar=Navbar]
-  header = Default
-  
-  # cat=porto; type=boolean; label= Header Navigation Type; type=options[Default=0,Flat=header-nav-stripe,Top-Line=header-nav-top-line]
-  headerNavType = 
-  
-  # cat=porto; label = PageHeader Layout; type=options[None=0,Default=Default,Breadcrumb Right=BreadcrumbRight,Breadcrumb Left=BreadcrumbLeft]
-  pageHeader = Default
-  
-  # cat=porto; label = PageHeader Background; type=options[Default=0,Primary Color=page-header-color page-header-primary,Secondary Color=page-header-color page-header-secondary,Tertiary Color=page-header-color page-header-tertiary,Quaternary Color=page-header-color page-header-quaternary,Light=page-header-light]
-  pageHeaderColor = 0
-    
-  # cat=porto; type=boolean; label= PageHeader More Padding
-  pageHeaderMorePadding = 0
+    # cat=porto; label = Where are the Porto Theme files?
+    files = fileadmin/Porto/HTML/
+
+    # cat=porto; label = Skin; type=options[Default=default,Restaurant=skin-restaurant]
+    skin = default
+
+    # cat=porto; type=boolean; label= Boxed layout?
+    boxed = 0
+
+    #cat=porto; type=color; label = Theme color
+    themeColor =
+
+    # cat=porto; label = Header Layout; type=options[Default=Default,Flat=Flat,Flat with Top Bar=FlatTopBar,With Navigation Bar=Navbar]
+    header = Default
+
+    # cat=porto; type=boolean; label= Header Navigation Type; type=options[Default=0,Flat=header-nav-stripe,Top-Line=header-nav-top-line]
+    headerNavType =
+
+    # cat=porto; label = PageHeader Layout; type=options[None=0,Default=Default,Breadcrumb Right=BreadcrumbRight,Breadcrumb Left=BreadcrumbLeft]
+    pageHeader = Default
+
+    # cat=porto; label = PageHeader Background; type=options[Default=0,Primary Color=page-header-color page-header-primary,Secondary Color=page-header-color page-header-secondary,Tertiary Color=page-header-color page-header-tertiary,Quaternary Color=page-header-color page-header-quaternary,Light=page-header-light]
+    pageHeaderColor = 0
+
+    # cat=porto; type=boolean; label= PageHeader More Padding
+    pageHeaderMorePadding = 0
 }
 
 
@@ -37,14 +40,14 @@ plugin.tx_porto.template{
 ### NAVIGATION ###
 ##################
 plugin.tx_porto.navigation{
-  # cat=porto.navigation; label = Home page
-  homepageUid = 1
-  
-  # cat=porto.navigation; label = Main navigation root page
-  mainNavRoot = 2
-  
-   # cat=porto.navigation; label = Meta navigation root page
-  metaNavRoot = 3
+    # cat=porto.navigation; label = Home page
+    homepageUid = 1
+
+    # cat=porto.navigation; label = Main navigation root page
+    mainNavRoot = 2
+
+    # cat=porto.navigation; label = Meta navigation root page
+    metaNavRoot = 3
 }
 
 
@@ -53,95 +56,112 @@ plugin.tx_porto.navigation{
 ##############
 plugin.tx_porto.header{
 
-  # cat=porto.header; label = Logo File
-  logo.file =
-  
-  # cat=porto.header; label = Logo Alternative Text
-  logo.alt =
-  
-  # cat=porto.header; type=boolean; label= Big Header Logo?
-  logo.big = 0
-  
-  # cat=porto.header; label = Phone
-  phone =
-  
-  # cat=porto.header; type=boolean; label= Show Search Input
-  searchShow = 0
-  
-  # cat=porto.header; label = Search Page uid
-  searchPid = 0
-  
-  # cat=porto.header; type = boolean; label = Show social media buttons in header?
-  socialmedia = 0
-  
-  # cat=porto.header; label = Facebook URL
-  facebookUrl = 
-  
-  # cat=porto.header; label = Twitter URL
-  twitterUrl = 
-  
+    # cat=porto.header; label = Logo File
+    logo.file =
+
+    # cat=porto.header; label = Logo Alternative Text
+    logo.alt =
+
+    # cat=porto.header; type=boolean; label= Big Header Logo?
+    logo.big = 0
+
+    # cat=porto.header; label = Phone
+    phone =
+
+    # cat=porto.header; label = Email
+    email =
+
+    # cat=porto.header; label = Address
+    address =
+
+    # cat=porto.header; label = Claim
+    claim =
+
+    # cat=porto.header; type=boolean; label= Show Search Input
+    searchShow = 0
+
+    # cat=porto.header; label = Search Page uid
+    searchPid = 0
+
+    # cat=porto.header; type = boolean; label = Show social media buttons in header?
+    socialmedia = 0
+
+    # cat=porto.socialmedia; label = Facebook URL
+    facebookUrl =
+
+    # cat=porto.socialmedia; label = Twitter URL
+    twitterUrl =
+
+    # cat=porto.socialmedia; label = Instagram URL
+    instagramUrl =
+
+    # cat=porto.socialmedia; label = Google+ URL
+    googleplusUrl =
+
+    # cat=porto.socialmedia; label = LinkedIn URL
+    linkedinUrl =
 }
 
 ##############
 ### FOOTER ###
 ##############
 plugin.tx_porto.footer{
-  # cat=porto.footer; label = From Page
-  fromPage = 
-  
-  # cat=porto.footer; label = Background; type=options[Default=,Light=light,Primary=color color-primary,Secondary=color color-secondary,Tertiary=color color-tertiary,Quaternary=color color-quaternary]
-  background = 
-  
-  # cat=porto.footer; label = Layout; type=options[Default=Default,Simple=Simple,Minimal=Minimal]
-  layout = Default
-  
-  # cat=porto.footer; label = Logo File URL
-  logo = 
+    # cat=porto.footer; label = From Page
+    fromPage =
+
+    # cat=porto.footer; label = Background; type=options[Default=,Light=light,Primary=color color-primary,Secondary=color color-secondary,Tertiary=color color-tertiary,Quaternary=color color-quaternary]
+    background =
+
+    # cat=porto.footer; label = Layout; type=options[Default=Default,Simple=Simple,Minimal=Minimal]
+    layout = Default
+
+    # cat=porto.footer; label = Logo File URL
+    logo =
 }
 
 ############
 ### PAGE ###
 ############
 page {
-	meta {
-		description =
-		author =
-		keywords =
-		viewport = width=device-width, initial-scale=1
-		robots = index,follow
-		apple-mobile-web-app-capable = no
-		compatible = IE=edge
-		google = notranslate
-	}
+    meta {
+        description =
+        author =
+        keywords =
+        viewport = width=device-width, initial-scale=1
+        robots = index,follow
+        apple-mobile-web-app-capable = no
+        compatible = IE=edge
+        google = notranslate
+    }
 
-	tracking {
-		google {
-			trackingID = 
-			anonymizeIp = 1
-		}
-	}
+    tracking {
+        google {
+            trackingID =
+            anonymizeIp = 1
+        }
+    }
 }
 
 ##############
 ### CONFIG ###
 ##############
 config {
-	baseURL = 
-	# cat=porto: advanced/150/110; type=boolean; label=No Cache
-	no_cache = 0
-	# cat=porto: advanced/150/120; type=options[Do not remove=0,Remove=1,Move to external file=external]; label=Remove default JavaScript
-	removeDefaultJS =  
-	# cat=porto: advanced/150/130; type=boolean; label=Compress JavaScript
-	compressJs = 0
-	# cat=porto: advanced/150/140; type=boolean; label=Compress Css
-	compressCss =0
-	# cat=porto: advanced/150/150; type=boolean; label=Concatenate JavaScript
-	concatenateJs = 0
-	# cat=porto: advanced/150/160; type=boolean; label=Concatenate Css
-	concatenateCss = 0
-	# cat=porto: advanced/150/170; type=boolean; label=Admin Panel
-	admPanel = 0
-	# cat=porto: advanced/150/180; type=options[None=,All=all,Cached=cached,Output=output]; label=Prefix local Anchors: See [http://docs.typo3.org/typo3cms/TyposcriptReference/Setup/Config/Index.html#prefixlocalanchors] for explaination.
-	prefixLocalAnchors = all
-	headerComment = TYPO3 development by ZECHENDORF - https://www.zechendorf.com  
+    baseURL =
+    # cat=porto: advanced/150/110; type=boolean; label=No Cache
+    no_cache = 0
+    # cat=porto: advanced/150/120; type=options[Do not remove=0,Remove=1,Move to external file=external]; label=Remove default JavaScript
+    removeDefaultJS =
+    # cat=porto: advanced/150/130; type=boolean; label=Compress JavaScript
+    compressJs = 0
+    # cat=porto: advanced/150/140; type=boolean; label=Compress Css
+    compressCss =0
+    # cat=porto: advanced/150/150; type=boolean; label=Concatenate JavaScript
+    concatenateJs = 0
+    # cat=porto: advanced/150/160; type=boolean; label=Concatenate Css
+    concatenateCss = 0
+    # cat=porto: advanced/150/170; type=boolean; label=Admin Panel
+    admPanel = 0
+    # cat=porto: advanced/150/180; type=options[None=,All=all,Cached=cached,Output=output]; label=Prefix local Anchors: See [http://docs.typo3.org/typo3cms/TyposcriptReference/Setup/Config/Index.html#prefixlocalanchors] for explaination.
+    prefixLocalAnchors = all
+    headerComment = TYPO3 development by ZECHENDORF - https://www.zechendorf.com
 }
