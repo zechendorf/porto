@@ -57,7 +57,7 @@ plugin.tx_porto.navigation{
 plugin.tx_porto.header{
 
     # cat=porto.header; label = Logo File
-    logo.file =
+    logo.file = fileadmin/Porto/HTML/img/logo-default.png
 
     # cat=porto.header; label = Logo Alternative Text
     logo.alt =
