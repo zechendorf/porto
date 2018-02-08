@@ -294,6 +294,7 @@ page{
         appear = {$plugin.tx_porto.template.files}vendor/jquery.appear/jquery.appear.min.js
         easing = {$plugin.tx_porto.template.files}vendor/jquery.easing/jquery.easing.min.js
         cookie = {$plugin.tx_porto.template.files}vendor/jquery-cookie/jquery-cookie.min.js
+        popper = {$plugin.tx_porto.template.files}vendor/popper/umd/popper.min.js
         bootstrap = {$plugin.tx_porto.template.files}vendor/bootstrap/js/bootstrap.min.js
         common = {$plugin.tx_porto.template.files}vendor/common/common.min.js
         validation = {$plugin.tx_porto.template.files}vendor/jquery.validation/jquery.validation.min.js
