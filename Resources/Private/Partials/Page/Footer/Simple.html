@@ -16,9 +16,9 @@
         <f:if condition="{footerLogo}">
           <f:then>
             <div class="col-lg-1">
-              <a href="index.html" class="logo">
+              <f:link.page pageUid="{homepageUid}" class="logo">
                 <img alt="Porto Website Template" class="img-fluid" src="{footerLogo}">
-              </a>
+              </f:link.page>
             </div>
             <div class="col-lg-7">
               <v:content.render pageUid="{footerFromPage}" column="4" />
