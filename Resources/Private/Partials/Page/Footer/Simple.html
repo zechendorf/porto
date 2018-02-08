@@ -1,22 +1,37 @@
-<footer id="footer" class="{footerBackground}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<footer class="{footerBackground}" id="footer">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-9">
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{footerFromPage}', colPos: '0'}"/>
+      <div class="col-lg-8">
+        <v:content.render pageUid="{footerFromPage}" column="0" />
       </div>
-      <div class="col-xs-12 col-md-3">
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{footerFromPage}', colPos: '1'}"/>
+      <div class="col-lg-3 col-lg-offset-1">
+        <v:content.render pageUid="{footerFromPage}" column="1" />
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      <div class="col-xs-12 col-md-9">
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{footerFromPage}', colPos: '4'}"/>
-      </div>
-      <div class="col-xs-12 col-md-3">
-        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{pageUid: '{footerFromPage}', colPos: '5'}"/>
+      <div class="row">
+        <f:if condition="{footerLogo}">
+          <f:then>
+            <div class="col-lg-1">
+              <a href="index.html" class="logo">
+                <img alt="Porto Website Template" class="img-fluid" src="{footerLogo}">
+              </a>
+            </div>
+            <div class="col-lg-11">
+              <v:content.render pageUid="{footerFromPage}" column="5" />
+            </div>
+          </f:then>
+          <f:else>
+            <div class="col-lg-12">
+              <v:content.render pageUid="{footerFromPage}" column="5" />
+            </div>
+          </f:else>
+        </f:if>
       </div>
     </div>
   </div>
 </footer>
+</html>

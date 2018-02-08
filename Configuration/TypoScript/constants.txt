@@ -119,7 +119,7 @@ plugin.tx_porto.footer{
     layout = Default
 
     # cat=porto.footer; label = Logo File URL
-    logo =
+    logo = fileadmin/Porto/HTML/img/logo-footer.png
 }
 
 ############
