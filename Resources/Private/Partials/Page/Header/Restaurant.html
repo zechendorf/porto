@@ -1,3 +1,4 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
 <header id="header" class="header-narrow" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 53, 'stickySetTop': '-53px', 'stickyChangeLogo': false}">
     <div class="header-body">
         <div class="header-top header-top-secondary header-top-style-3">
@@ -45,7 +46,7 @@
                             </button>
                             <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                 <nav>
-                                    <f:cObject typoscriptObjectPath="lib.mainNav" />
+                                    <f:render partial="Navigation/Main.html" />
                                 </nav>
                             </div>
                         </div>
@@ -55,3 +56,4 @@
         </div>
     </div>
 </header>
+</html>

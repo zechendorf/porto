@@ -1,3 +1,4 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
 <header id="header" class="header-no-border-bottom has-nav-bar" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 120, 'stickySetTop': '-120px', 'stickyChangeLogo': false}">
   <div class="header-body">
     <div class="header-container container">
@@ -67,10 +68,11 @@
         </f:if>
         <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
           <nav>
-            <f:cObject typoscriptObjectPath="lib.mainNav" />
+            <f:render partial="Navigation/Main.html" />
           </nav>
         </div>
       </div>
     </div>
   </div>
 </header>
+</html>
