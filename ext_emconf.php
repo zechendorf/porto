@@ -15,7 +15,8 @@ https://goo.gl/MpLeUN',
     'version' => '6.0.0',
     'constraints' => array(
         'depends' => array(
-            'typo3' => '8.7.0-8.7.99'
+            'typo3' => '8.7.0-8.7.99',
+            'vhs' => '4.3.0-4.99.99'
         ),
         'conflicts' => array(
         ),
