@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+    <v:menu.directory pages="{pages}" levels="1" as="elems">
+        <f:for each="{elems}" as="elem">
+            <li class="nav-item d-none d-sm-block">
+                <f:link.page pageUid="{elem.uid}" class="nav-link">
+                    <i class="fa fa-angle-right"></i>
+                    {elem.title}
+                </f:link.page>
+            </li>
+        </f:for>
+    </v:menu.directory>
+</html>

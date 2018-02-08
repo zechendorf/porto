@@ -2,10 +2,10 @@
     <v:menu.directory pages="{pages}" levels="2" expandAll="true" as="elems">
         <ul class="nav nav-pills" id="mainNav">
             <f:for each="{elems}" as="elem">
-                <f:if condition="{elem.class}=='sub'">
+                <f:if condition="{elem.hasSubPages}">
                     <f:then>
                         <li class="dropdown">
-                            <f:link.page pageUid="{elem.uid}" class="dropdown-item dropdown-toggle">{elem.title}</f:link.page>
+                            <f:link.page pageUid="{elem.uid}" class="dropdown-item dropdown-toggle{f:if(condition:elem.active,then:' active')}">{elem.title}</f:link.page>
                             <v:menu.directory pages="{elem.uid}" levels="1" as="subElems">
                                 <ul class="dropdown-menu">
                                     <f:for each="{subElems}" as="subElem">
@@ -19,7 +19,7 @@
                     </f:then>
                     <f:else>
                         <li class="">
-                            <f:link.page pageUid="{elem.uid}" class="nav-link">{elem.title}</f:link.page>
+                            <f:link.page pageUid="{elem.uid}" class="nav-link{f:if(condition:elem.active,then:' active')}">{elem.title}</f:link.page>
                         </li>
                     </f:else>
                 </f:if>
