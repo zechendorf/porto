@@ -2,20 +2,64 @@
     <v:menu.directory pages="{pages}" levels="2" expandAll="true" as="elems">
         <ul class="nav nav-pills" id="mainNav">
             <f:for each="{elems}" as="elem">
-                <f:if condition="{elem.hasSubPages}">
+                <f:if condition="{levels}>1">
                     <f:then>
-                        <li class="dropdown">
-                            <f:link.page pageUid="{elem.uid}" class="dropdown-item dropdown-toggle{f:if(condition:elem.active,then:' active')}">{elem.title}</f:link.page>
-                            <v:menu.directory pages="{elem.uid}" levels="1" as="subElems">
-                                <ul class="dropdown-menu">
-                                    <f:for each="{subElems}" as="subElem">
-                                        <li class="">
-                                            <f:link.page pageUid="{subElem.uid}" class="nav-link">{subElem.title}</f:link.page>
-                                        </li>
-                                    </f:for>
-                                </ul>
-                            </v:menu.directory>
-                        </li>
+                        <f:if condition="{elem.hasSubPages}">
+                            <f:then>
+                                <li class="dropdown">
+                                    <f:link.page pageUid="{elem.uid}" class="dropdown-item dropdown-toggle{f:if(condition:elem.active,then:' active')}">{elem.title}</f:link.page>
+                                    <v:menu.directory pages="{elem.uid}" levels="1" as="subElems">
+                                        <ul class="dropdown-menu">
+                                            <f:for each="{subElems}" as="subElem">
+                                                <f:if condition="{levels}>2">
+                                                    <f:then>
+                                                        <f:if condition="{subElem.hasSubPages}">
+                                                            <f:then>
+                                                                <li class="dropdown-submenu">
+                                                                    <f:link.page pageUid="{subElem.uid}" class="dropdown-item">
+                                                                        {subElem.title} <i class="fa fa-caret-down"></i>
+                                                                    </f:link.page>
+                                                                    <v:menu.directory pages="{subElem.uid}" levels="1" as="subSubElems">
+                                                                        <ul class="dropdown-menu">
+                                                                            <f:for each="{subSubElems}" as="subSubElem">
+                                                                                <li>
+                                                                                    <f:link.page pageUid="{subSubElem.uid}" class="dropdown-item">
+                                                                                        {subSubElem.title}
+                                                                                    </f:link.page>
+                                                                                </li>
+                                                                            </f:for>
+                                                                        </ul>
+                                                                    </v:menu.directory>
+                                                                </li>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <li class="">
+                                                                    <f:link.page pageUid="{subElem.uid}" class="nav-link">
+                                                                        {subElem.title}
+                                                                    </f:link.page>
+                                                                </li>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <li class="">
+                                                            <f:link.page pageUid="{subElem.uid}" class="nav-link">
+                                                                {subElem.title}
+                                                            </f:link.page>
+                                                        </li>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:for>
+                                        </ul>
+                                    </v:menu.directory>
+                                </li>
+                            </f:then>
+                            <f:else>
+                                <li class="">
+                                    <f:link.page pageUid="{elem.uid}" class="nav-link{f:if(condition:elem.active,then:' active')}">{elem.title}</f:link.page>
+                                </li>
+                            </f:else>
+                        </f:if>
                     </f:then>
                     <f:else>
                         <li class="">
