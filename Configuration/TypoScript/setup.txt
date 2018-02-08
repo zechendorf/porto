@@ -127,7 +127,9 @@ page{
             footerBackground.value = {$plugin.tx_porto.footer.background}
             navigationMainNavRoot = TEXT
             navigationMainNavRoot.value = {$plugin.tx_porto.navigation.mainNavRoot}
-            navigationMetaNavRoot = TEXT
+            navigationMainNavRoot = TEXT
+            navigationMainNavLevels.value = {$plugin.tx_porto.navigation.mainNavLevels}
+            navigationMetaNavLevels = TEXT
             navigationMetaNavRoot.value = {$plugin.tx_porto.navigation.metaNavRoot}
             headerSearchShow = TEXT
             headerSearchShow.value = {$plugin.tx_porto.header.searchShow}

@@ -46,6 +46,9 @@ plugin.tx_porto.navigation{
     # cat=porto.navigation; label = Main navigation root page
     mainNavRoot = 2
 
+    # cat=porto.navigation; label = Main navigation levels; type=options[1=1,2=2,3=3]
+    mainNavLevels = 3
+
     # cat=porto.navigation; label = Meta navigation root page
     metaNavRoot = 3
 }
