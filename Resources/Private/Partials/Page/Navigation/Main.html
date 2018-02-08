@@ -1,3 +1,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
-    
+    <v:menu.directory pages="{pages}" levels="2" expandAll="true" as="elems">
+        <ul class="nav nav-pills" id="mainNav">
+            <f:for each="{elems}" as="elem">
+                <f:if condition="{elem.class}=='sub'">
+                    <f:then>
+                        <li class="dropdown">
+                            <f:link.page pageUid="{elem.uid}" class="dropdown-item dropdown-toggle">{elem.title}</f:link.page>
+                            <v:menu.directory pages="{elem.uid}" levels="1" as="subElems">
+                                <ul class="dropdown-menu">
+                                    <f:for each="{subElems}" as="subElem">
+                                        <li class="">
+                                            <f:link.page pageUid="{subElem.uid}" class="nav-link">{subElem.title}</f:link.page>
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </v:menu.directory>
+                        </li>
+                    </f:then>
+                    <f:else>
+                        <li class="">
+                            <f:link.page pageUid="{elem.uid}" class="nav-link">{elem.title}</f:link.page>
+                        </li>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </ul>
+    </v:menu.directory>
 </html>
