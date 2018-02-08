@@ -4,13 +4,15 @@
         <div class="header-container container">
             <div class="header-row">
                 <div class="header-column">
-                    <div class="header-logo">
-                        <f:link.page pageUid="{homepageUid}">
-                            <f:if condition="{headerLogoBig}">
-                                <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
-                                <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
-                            </f:if>
-                        </f:link.page>
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <f:link.page pageUid="{homepageUid}">
+                                <f:if condition="{headerLogoBig}">
+                                    <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
+                                    <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
+                                </f:if>
+                            </f:link.page>
+                        </div>
                     </div>
                 </div>
                 <div class="header-column justify-content-end">

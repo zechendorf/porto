@@ -1,52 +1,54 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
 <header id="header" class="header-mobile-nav-only" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 57, 'stickySetTop': '-57px', 'stickyChangeLogo': true}">
-  <div class="header-body">
-    <div class="header-container container">
-      <div class="header-row">
-        <div class="header-column">
-          <div class="header-logo">
-						<f:link.page pageUid="{homepageUid}">
-              <f:if condition="{headerLogoBig}">
-                <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
-                <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
-              </f:if>
-						</f:link.page>
-          </div>
-        </div>
-        <div class="header-column">
-          <div class="header-row">
-            <div class="header-nav{f:if(condition:headerNavType,then:' {headerNavType}')}">
-              <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
-                <i class="fa fa-bars"></i>
-              </button>
-              <f:if condition="{headerSocialmedia}">
-                <ul class="header-social-icons social-icons hidden-xs">
-                  <f:if condition="{headerFacebookUrl}">
-                    <li class="social-icons-facebook">
-                      <a href="{headerFacebookUrl}" target="_blank" title="Facebook">
-                        <i class="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                  </f:if>
-                  <f:if condition="{headerTwitterUrl}">
-                    <li class="social-icons-twitter">
-                      <a href="{headerTwitterUrl}" target="_blank" title="Twitter">
-                        <i class="fa fa-twitter"></i>
-                      </a>
-                    </li>
-                  </f:if>
-                </ul>
-              </f:if>
-              <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
-                <nav>
-                  <f:render partial="Navigation/Main.html" arguments="{pages:navigationMainNavRoot}" />
-                </nav>
-              </div>
+    <div class="header-body">
+        <div class="header-container container">
+            <div class="header-row">
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-logo">
+                            <f:link.page pageUid="{homepageUid}">
+                                <f:if condition="{headerLogoBig}">
+                                    <f:then><img alt="{headerLogoAlt}" width="167" height="81" data-sticky-width="123" data-sticky-height="60" data-sticky-top="33" src="{headerLogoFile}"></f:then>
+                                    <f:else><img alt="{headerLogoAlt}" width="111" height="54" data-sticky-width="82" data-sticky-height="40" data-sticky-top="33" src="{headerLogoFile}"></f:else>
+                                </f:if>
+                            </f:link.page>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-column">
+                    <div class="header-row">
+                        <div class="header-nav{f:if(condition:headerNavType,then:' {headerNavType}')}">
+                            <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <f:if condition="{headerSocialmedia}">
+                                <ul class="header-social-icons social-icons hidden-xs">
+                                    <f:if condition="{headerFacebookUrl}">
+                                        <li class="social-icons-facebook">
+                                            <a href="{headerFacebookUrl}" target="_blank" title="Facebook">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                    </f:if>
+                                    <f:if condition="{headerTwitterUrl}">
+                                        <li class="social-icons-twitter">
+                                            <a href="{headerTwitterUrl}" target="_blank" title="Twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                    </f:if>
+                                </ul>
+                            </f:if>
+                            <div class="header-nav-main header-nav-main-square header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                                <nav>
+                                    <f:render partial="Navigation/Main.html" arguments="{pages:navigationMainNavRoot,levels:navigationMainNavLevels}" />
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </header>
 </html>
