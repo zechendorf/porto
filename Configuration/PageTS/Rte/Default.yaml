@@ -11,10 +11,26 @@ editor:
 
     stylesSet:
       - { name: "Lead", element: "p", attributes: { 'class': 'lead' }}
-      - { name: "Button (primary)", element: "a", attributes: { 'class': 'btn btn-primary' }}
-      - { name: "Button (secondary)", element: "a", attributes: { 'class': 'btn btn-secondary' }}
-      - { name: "Button (tertiary)", element: "a", attributes: { 'class': 'btn btn-tertiary' }}
-      - { name: "Button (quaternary)", element: "a", attributes: { 'class': 'btn btn-quaternary' }}
+      - { name: "Button (primary)", element: "a", attributes: { 'class': 'btn btn-primary mb-2' }}
+      - { name: "Button (secondary)", element: "a", attributes: { 'class': 'btn btn-secondary mb-2' }}
+      - { name: "Button (tertiary)", element: "a", attributes: { 'class': 'btn btn-tertiary mb-2' }}
+      - { name: "Button (quaternary)", element: "a", attributes: { 'class': 'btn btn-quaternary mb-2' }}
+      - { name: "Button (success)", element: "a", attributes: { 'class': 'btn btn-success mb-2' }}
+      - { name: "Button (danger)", element: "a", attributes: { 'class': 'btn btn-danger mb-2' }}
+      - { name: "Button (warning)", element: "a", attributes: { 'class': 'btn btn-warning mb-2' }}
+      - { name: "Button (info)", element: "a", attributes: { 'class': 'btn btn-info mb-2' }}
+      - { name: "Button (light)", element: "a", attributes: { 'class': 'btn btn-light mb-2' }}
+      - { name: "Button (dark)", element: "a", attributes: { 'class': 'btn btn-dark mb-2' }}
+      - { name: "Button outline (primary)", element: "a", attributes: { 'class': 'btn btn-outline btn-primary mb-2' }}
+      - { name: "Button outline (secondary)", element: "a", attributes: { 'class': 'btn btn-outline btn-secondary mb-2' }}
+      - { name: "Button outline (tertiary)", element: "a", attributes: { 'class': 'btn btn-outline btn-tertiary mb-2' }}
+      - { name: "Button outline (quaternary)", element: "a", attributes: { 'class': 'btn btn-outline btn-quaternary mb-2' }}
+      - { name: "Button outline (success)", element: "a", attributes: { 'class': 'btn btn-outline btn-success mb-2' }}
+      - { name: "Button outline (danger)", element: "a", attributes: { 'class': 'btn btn-outline btn-danger mb-2' }}
+      - { name: "Button outline (warning)", element: "a", attributes: { 'class': 'btn btn-outline btn-warning mb-2' }}
+      - { name: "Button outline (info)", element: "a", attributes: { 'class': 'btn btn-outline btn-info mb-2' }}
+      - { name: "Button outline (light)", element: "a", attributes: { 'class': 'btn btn-outline btn-light mb-2' }}
+      - { name: "Button outline (dark)", element: "a", attributes: { 'class': 'btn btn-outline btn-dark mb-2' }}
 
     toolbarGroups:
       - { name: styles, groups: [ styles, format ] }
