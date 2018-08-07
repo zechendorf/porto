@@ -141,16 +141,18 @@ page{
             headerFacebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
             headerTwitterUrl = TEXT
             headerTwitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            headerGoogleplusUrl = TEXT
+            headerGoogleplusUrl.value = {$plugin.tx_porto.header.googleplusUrl}
             facebookUrl = TEXT
             facebookUrl.value = {$plugin.tx_porto.header.facebookUrl}
             twitterUrl = TEXT
             twitterUrl.value = {$plugin.tx_porto.header.twitterUrl}
             instagramUrl = TEXT
-            instagramUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            instagramUrl.value = {$plugin.tx_porto.header.instagramUrl}
             googleplusUrl = TEXT
-            googleplusUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            googleplusUrl.value = {$plugin.tx_porto.header.googleplusUrl}
             linkedinUrl = TEXT
-            linkedinUrl.value = {$plugin.tx_porto.header.twitterUrl}
+            linkedinUrl.value = {$plugin.tx_porto.header.linkedinUrl}
         }
     }
 
